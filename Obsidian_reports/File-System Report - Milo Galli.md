@@ -283,5 +283,19 @@ so I decoded it
 ```
 
 ![](./assets/lastsectors.jpg)
+#### How many files/deleted-files with extension TXT are there?
+
+```
+> fls corrupted.dd | grep -i txt
+
+r/r 45:	HOMEWORK.TXT
+r/r 32:	NETWORKS.TXT
+r/r * 36:	_EADME.TXT
+```
+
+I found out that there were only three txt files and one of them,  _\_EADME.TXT_, had been deleted
+
+#### Can you read them by readonly-mounting them/by using TSK? Why?
+
 
 
