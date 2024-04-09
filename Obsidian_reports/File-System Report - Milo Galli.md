@@ -179,3 +179,109 @@ fcat ps5.jpg linuxfs_extracted.dd > ps5jpg_extracted.jpg
 
 ![](./assets/ps5jpg_extracted.jpg)
 
+This should have been the content of the original partition.
+So the volume was originally partitioned using GPT and an NTFS filesystem was created in a partition.
+After that a ps5 image was saved on it but then a FAT12 was located in the first 2048 sectors erasing part of the GPT data.
+
+# Corrupted.dd
+
+```
+Is the image partitioned/bootable? If partitioned, list all partitions.
+
+Inside, you'll find a FAT FS:
+- what is the volume label?
+- what is the sector size?
+- what is the cluster size?
+- how many FAT tables are present?
+- are there sectors that are unused by the FS? If yes, what do they contain?
+
+How many files/deleted-files with extension TXT are there?
+Can you read them by readonly-mounting them/by using TSK? Why?
+
+One of them should correspond to SHA256
+e9207be4a1dde2c2f3efa3aeb9942858b6aaa65e82a9d69a8e6a71357eb2d03c
+... which one?
+
+If you cannot extract such content, something is corrupted (hint hint); find the root cause and fix the file system before continuing.
+You must explain how you found and fixed the problem.
+
+Inside the file corrupted.dd there are some occurrences of the string "zxgio" (without quotes); can you list their offset in bytes?
+
+For each occurrence of such a string, determine its location with respect to the FAT file system. For instance, is the string contained inside a file? Is it in some unused/slack space? In other areas?
+```
+
+## Verify the image
+
+```
+> sha256sum --check corrupted.dd.sha256
+corrupted.dd: OK
+```
+
+## Analysis
+
+#### Is the image partitioned/bootable? If partitioned, list all partitions.
+
+In order to list partitions I used, as I did previously, **TSK - mmls** that doesn't output anything so we can infer that the image is not partitioned.
+In order to understand whether the image is bootable or not we can take a look with a hex-editor at the boot-code in the header and analyse it.
+
+![](./assets/corrupteddd_hexeditor.png)
+
+As we can see the image seems not to be bootable.
+
+#### What is the volume label?
+From **TSK - fsstat** : **BILL**
+
+#### What is the sector size?
+ From **TSK - fsstat** : **2048**
+
+#### What is the cluster size?
+From **TSK - fsstat** : **2048**
+
+#### How many FAT tables are present?
+
+From **TSK - fsstat** : **3**
+
+```
+* FAT 0: 1 - 1
+* FAT 1: 2 - 2
+* FAT 2: 3 - 3
+```
+
+#### Are there sectors that are unused by the FS? If yes, what do they contain?
+
+We can check if there are any unused sectors by getting first the total number of sectors.
+This can be done easily by getting the file size and dividing it by the sector size.
+I used **stat** to get the file size and  I already had the sector size from **TSK - fsstat**
+
+```
+> stat -c %s corrupted.dd 
+1476608
+
+> echo $(( 1476608 / 2048 ))
+721
+```
+
+Considering the fact that there are 721 sectors but **TSK - fsstat** outputed as last sector used the 719th I inferred that there were 2 sectors unused.
+Using **dd** I then extracted the data in those sectors
+
+```
+> dd if=corrupted.dd of=lastsectors.out bs=2k skip=720 
+```
+
+```
+> less lastsectors.out 
+
+R0lGODlhVgAhALMLAP///wAAAP//AP/kAOu9ArZ9A9KfAYBUALOzs7F1AWwADgAAAAAAAAAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh+QQFCgALACwAAAAAVgAhAAAE/3DJSau9OOvNd/hgKI5kaZ5o+lUB4L5wLM90bd+4G1Bt7v/AIGw36QFaRuEriWMqYz2ixIh8Wq+0KG951IlkoGXUS/1AyeKo+bhmc49b3VDefY+792rdLnfWx3k6cXt/dHSBiIaHh2WIYX+DSYF8hYmEhYR6lmCRc5hpYot/baJIayGlp4JFSnc5rlhNg0Gkr36xWbO4u7hSUyrAwcImUCMdx8jJx5K+ys7P0GXQ09TJatXY2QXbBwc8K9nh0NsDAwTn4OLqzwUDAu/v5gTN6/Ua7fD58vT2/RQFAkDAAzHPn8EK7QIgUBgg4BID/A6uSwgAwRGHFgNAlHiQoo6AC0QXbuTo74A7ge8IjiRpz2S5fPEGGEgQkWW2AwTcBfxQjgBNmyXPDQigoGgAAjNrAsWGE92HmT+XljxgoGpSpVLDiagWAQAh+QQFCgALACw4ABcACQAIAAAEEnABsGpFweqAtKReKI6klVVnBAAh+QQFCgALACw4ABcACQADAAAECxCsOVFYklIZkMYRACH5BAUKAAsALDgAFwAJAAMAAAQMcC0kJQAyVL1unVIEADs=...
+
+```
+
+Running some analysis tools on the file I discovered that it was base64 encoded
+so I decoded it
+
+```
+> base64 -d lastsectors.out > lastsectors
+```
+
+![](./assets/lastsectors.jpg)
+
+
