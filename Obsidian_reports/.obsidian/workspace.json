@@ -1,0 +1,159 @@
+{
+  "main": {
+    "id": "8ecf5c755c89d7a4",
+    "type": "split",
+    "children": [
+      {
+        "id": "cd2770012e1f223f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "48a351e211d81aaf",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "File-System Report - Milo Galli.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "960901aba7d53272",
+    "type": "split",
+    "children": [
+      {
+        "id": "f6cd9096cb1cbe01",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7c1f0b818abfe434",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "7496163acb16479d",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "b8881b72e17c342b",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "aaae98ad6bcc5d33",
+    "type": "split",
+    "children": [
+      {
+        "id": "42bbd0ca0ff07d87",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1cd3c267010083ca",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "File-System Report - Milo Galli.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "205963c3418c29ae",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "File-System Report - Milo Galli.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "dd3e301c0217237a",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "58d4909b793be243",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "File-System Report - Milo Galli.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "48a351e211d81aaf",
+  "lastOpenFiles": [
+    "Digital Forensics/assets/ps5jpg_extracted.jpg",
+    "Digital Forensics/assets/xboxjpg_extracted.jpg",
+    "Digital Forensics/File-System Report - Milo Galli.md",
+    "Digital Forensics/assets",
+    "Digital Forensics/Computer Foundations/Computer Foundations.md",
+    "Digital Forensics/Computer Foundations",
+    "Digital Forensics"
+  ]
+}

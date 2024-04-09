@@ -6,7 +6,15 @@ Something fishy is going on. Someone gave us this image of an unpartitioned FAT 
 Can you reconstruct the original partition scheme and recover the content of the original partition?
 ```
 
-## Analysis steps
+## Verify the image
+
+```
+> sha256sum --check console.dd.sha256
+console.dd: OK
+```
+
+## Analysis
+
 I started by running **TSK - fls** to list files and directories in the image since I read that there was a JPEG picture inside the provided image
 
 ```
