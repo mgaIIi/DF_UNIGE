@@ -465,3 +465,29 @@ e9207be4a1dde2c2f3efa3aeb9942858b6aaa65e82a9d69a8e6a71357eb2d03c  NETWORKS.TXT
 
 And surely enough NETWORKS.TXT seemed to match my research.
 
+#### Inside the file corrupted.dd there are some occurrences of the string "zxgio" (without quotes); can you list their offset in bytes?
+
+```
+> srch_strings corrupted.dd -a -t x | grep zxgio
+
+200 zxgio
+b10 zxgio
+b0c39 zxgio
+135800 zxgio
+```
+
+#### For each occurrence of such a string, determine its location with respect to the FAT file system. For instance, is the string contained inside a file? Is it in some unused/slack space? In other areas?
+
+The first occurrence can be found at a pretty low address, **0x200**, so by opening the file with a hex-editor I found that it was just after the boot sector
+
+![](./assets/zxgio_0x200.png)
+
+The second _zxgio_ has an address slighltly higher, **0xb10**.
+Since the sector size is 2048 I inferred that the image which substituted the first FAT could contain the occurrence.
+
+```
+> strings fat0.gif | grep zxgio
+zxgio
+```
+
+Following the same logic as above the third _zxgio_  could be found in the sector 353, so I tried to get that sector using dd
