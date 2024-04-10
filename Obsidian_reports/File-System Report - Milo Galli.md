@@ -429,9 +429,9 @@ files included with MS-DOS:
 
 ``` 
 
-Readonly-mounting them I was only able to read the content of _HOMEWORKS.TXT_.  
-
-Following the hint provided I looked into the image for something off in the image and since I knew from **TSK - fsstat** that there were three FATs after the MBR I tried to extract them using **dd** and see  their content.
+Readonly-mounting them I was only able to read the content of _HOMEWORKS.TXT_ so I needed to repair the FS before continuing the analysis.  
+  
+Following the hint provided I looked into the image for something off in the image and since I knew from  **TSK - fsstat** that there were three FATs after the MBR I tried to extract them using **dd** and see  their content.
 
 ```
 > dd if=corrupted.dd of=fat0 bs=2K skip=1 count=1
@@ -443,10 +443,25 @@ Running **file** on all three files I discovered that the first FAT was replaced
 
 ![](./assets/corrupteddd_FAT0.gif)
 
-So that must had been the cause of corruption.
-Running **file** on the other two files outputted only _data_ so I inferred that they would be actually backups of the first FAT.
-In order to check that I ran **diff** on them and nothing showed so I could go on and fix the FS that could be done by replacing the picture in FAT0 with FAT1.
+So that must had been the cause of corruption.  
+Running **file** on the other two files outputted only _data_ so I inferred that they would be actually backups of the first FAT.  
+In order to check that I ran **diff** on them and nothing showed so I could go on and fix the FS that could be done by replacing the picture in FAT0 with FAT1.  
 This operation could be done with dd.
 
+```
+> dd if=fat1 of=copycor.dd bs=2K seek=1 conv=notrunc
+```
 
+Doing so I was able to mount the filesystem and analyse correctly the txt files.
+Like that I checked also their hash  looking for the one matching **e9207be4a1dde2c2f3efa3aeb9942858b6aaa65e82a9d69a8e6a71357eb2d03c**
+
+```
+> sha256sum *.TXT
+
+9b4a458763b06fefc65ba3d36dd0e1f8b5292e137e3db5dea9b1de67dc361311  HOMEWORK.TXT
+e9207be4a1dde2c2f3efa3aeb9942858b6aaa65e82a9d69a8e6a71357eb2d03c  NETWORKS.TXT
+
+```
+
+And surely enough NETWORKS.TXT seemed to match my research.
 
