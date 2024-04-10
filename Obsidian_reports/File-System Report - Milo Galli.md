@@ -449,7 +449,8 @@ In order to check that I ran **diff** on them and nothing showed so I could go o
 This operation could be done with dd.
 
 ```
-> dd if=fat1 of=copycor.dd bs=2K seek=1 conv=notrunc
+> cp corrupted.dd fixed.dd
+> dd if=fat1 of=fixed.dd bs=2K seek=1 conv=notrunc
 ```
 
 Doing so I was able to mount the filesystem and analyse correctly the txt files.
@@ -490,4 +491,80 @@ Since the sector size is 2048 I inferred that the image which substituted the fi
 zxgio
 ```
 
-Following the same logic as above the third _zxgio_  could be found in the sector 353, so I tried to get that sector using dd
+Following the same logic as above the third _zxgio_  could be found in the sector 353, obtained by converting the address to decimal and then dividing by the sectors'size
+( 724025 / 2048 ).
+So I used **dd** the get the data contained in that sector
+
+```
+> dd if=corrupted.dd of=third_zxgio bs=2K skip=353 count=1
+> less third_zxgio
+
+nabled. To prevent this, use the
+PC-NFS /D switch to specify the number of drives you are using. For
+more information, see your PC- NFS documentation.
+
+If you can't use the COPY or XCOPY command on PC-NFS 3.01, contact
+your vendor to get an updated version of the PCNFS.SYS device driver.
+
+If you use PC-NFS network software, carry out the following procedure
+before you run MemMaker:
+
+1. Open your MEMMAKER.INF file using any text editor. This file is
+   in the directory that contains your MS-DOS files.
+
+2. Add the following line to the file:
+
+   *NET
+
+3. Save the file, and then run MemMaker.
+
+15. TCS 10Net or DCA 10Net
+==========================
+DCA 10Net Plus Versions 4.20 (20) and later, and DCA 10Net versions
+3.3 (41) and later are compatible with MS-DOS 6.21. If you have an
+earlier version, contact your network vendor for an update.
+
+NOTE  Microsoft Defragmenter program is incompatible with 10Net
+network software if the server service is loaded. If only the
+redirector is loaded, the program is compatible with 10Net network
+software.
+zxgio
+```
+
+I saw that before the occurrence there was some some text and after mounting the fixed version of the image and looking through the files I found a match in the _NETWORKS.TXT_ file but it didn't show _zxgio_ at the end.
+So I checked the slack space of the file and there it was
+
+```
+> fcat -s NETWORKS.TXT fixed.dd
+
+NETWORKS.TXT
+
+This file contains information about making your network compatible
+with MS-DOS 6.21.
+
+This file contains the following sections:
+
+1.  MS-DOS Shell and Networks
+2.  3+Share
+
+[...]
+
+NOTE  Microsoft Defragmenter program is incompatible with 10Net
+network software if the server service is loaded. If only the
+redirector is loaded, the program is compatible with 10Net network
+software.
+zxgio
+```
+
+Doing the same arithmetic as above I found that the fourth _zxgio_ was located at sector 619.
+Analyzing with a hex-editor I saw that around the occurence there was nothing that could suggest its location so I run **TSK - fls** in order to get the inode number of the files in the image and then looked among the highest ones to see which one used the sector 619 using **TSK - istat**.
+The inode 45, corresponding to the _HOMEWORK.TXT_ file, seemed to use that sector so I used once again **TSK - fcat** to print the content
+
+```
+> fcat HOMEWORK.TXT fixed.dd
+zxgio
+```
+
+# Strange.dd
+
+
