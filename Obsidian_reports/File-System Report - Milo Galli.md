@@ -297,5 +297,137 @@ I found out that there were only three txt files and one of them,  _\_EADME.TXT_
 
 #### Can you read them by readonly-mounting them/by using TSK? Why?
 
+Using **TSK - fls**  and **TSK - icat** I was able to read the files
 
+```
+> fls corrupted.dd
+
+r/r 45:	HOMEWORK.TXT
+r/r 3:	BILL        (Volume Label Entry)
+r/r 4:	ATTRIB.EXE
+r/r 5:	AUTOEXEC.BAT
+r/r 6:	CHKDSK.EXE
+r/r 7:	COMMAND.COM
+r/r 8:	CONFIG.SYS
+r/r 9:	COUNTRY.SYS
+r/r 10:	COUNTRY.TX_
+r/r 11:	DEBUG.EXE
+r/r 12:	DEFRAG.EXE
+r/r 13:	DEFRAG.HL_
+r/r 14:	DOSSETUP.INI
+r/r 15:	DRVSPACE.BIN
+r/r 16:	EDIT.COM
+r/r 17:	EGA.CP_
+r/r 18:	EGA2.CP_
+r/r 19:	EGA3.CP_
+r/r 20:	EMM386.EX_
+r/r 21:	EXPAND.EXE
+r/r 22:	FDISK.EXE
+r/r 23:	FORMAT.COM
+r/r 24:	IO.SYS
+r/r 25:	ISO.CP_
+r/r 26:	KEYB.COM
+r/r 27:	KEYBOARD.SYS
+r/r 28:	KEYBRD2.SY_
+r/r 29:	MEM.EX_
+r/r 30:	MSCDEX.EXE
+r/r 31:	MSDOS.SYS
+r/r 32:	NETWORKS.TXT
+r/r 33:	NLSFUNC.EXE
+r/r 34:	PACKING.LST
+r/r 35:	QBASIC.EXE
+r/r * 36:	_EADME.TXT
+r/r 37:	REPLACE.EX_
+r/r 38:	RESTORE.EX_
+r/r 39:	SCANDISK.EXE
+r/r 40:	SCANDISK.INI
+r/r 41:	SETUP.EXE
+r/r 42:	SETUP.MSG
+r/r 43:	SYS.COM
+r/r 44:	XCOPY.EX_
+v/v 45827:	$MBR
+v/v 45828:	$FAT1
+V/V 45831:	$OrphanFiles
+ 
+```
+
+```
+> icat corrupted.dd 45 > homeworks.txt | less homeworks.txt
+
+zxgio
+
+```
+
+```
+> icat corrupted.dd 32 > networks.txt | less networks.txt
+
+
+NETWORKS.TXT
+
+This file contains information about making your network compatible
+with MS-DOS 6.21.
+
+This file contains the following sections:
+
+1.  MS-DOS Shell and Networks
+2.  3+Share
+3.  Arcnet systems
+4.  Artisoft LANtastic
+5.  AT&T StarGroup (non-LAN Manager)
+6.  Banyan VINES
+7.  DEC Pathworks and PCSA
+8.  IBM PC LAN
+9.  IBM DOS LAN Requester Version 1.30 or Earlier
+10. Microsoft LAN Manager and 100-Percent Compatible
+    Networks
+11. Microsoft MS-Net and 100-Percent Compatible
+    Networks
+12. Net/One PC
+13. Novell Networks
+14. PC-NFS 3.0
+15. TCS 10Net or DCA 10Net
+
+[...]
+
+```
+
+```
+> icat corrupted.dd 36 > readme_deleted.txt | less readme_deleted.txt
+
+README.TXT 
+
+NOTES ON MS-DOS 6.22
+====================
+This file provides important information not included in the
+MICROSOFT MS-DOS USER'S GUIDE or in MS-DOS Help.
+
+This file is divided into the following major sections:
+
+1. Setup
+2. MemMaker, EMM386, and Memory Management
+3. Windows
+4. Hardware Compatibility with MS-DOS 6.22
+5. Microsoft Backup, Defrag and Anti-Virus
+6. Third-Party Programs
+7. DriveSpace
+
+If the subject you need information about doesn't appear in
+this file, you might find it in one of the following text
+files included with MS-DOS:
+
+* OS2.TXT, which describes how to remove and save data on your
+  computer when you replace OS/2 with MS-DOS 6.22.
+
+* NETWORKS.TXT, which describes how to update your network software
+  for use with MS-DOS 6.22.
+
+* COUNTRY.TXT, which provides details about enhancements to the 
+  international keyboard and codepage (character set) support
+  included with MS-DOS 6.22.
+
+[...]
+
+``` 
+
+Readonly-mounting them I was only able to read the content of _HOMEWORKS.TXT_.  
 
