@@ -431,3 +431,22 @@ files included with MS-DOS:
 
 Readonly-mounting them I was only able to read the content of _HOMEWORKS.TXT_.  
 
+Following the hint provided I looked into the image for something off in the image and since I knew from **TSK - fsstat** that there were three FATs after the MBR I tried to extract them using **dd** and see  their content.
+
+```
+> dd if=corrupted.dd of=fat0 bs=2K skip=1 count=1
+> dd if=corrupted.dd of=fat1 bs=2K skip=2 count=1
+> dd if=corrupted.dd of=fat2 bs=2K skip=3 count=1
+```
+
+Running **file** on all three files I discovered that the first FAT was replaced by the following picture
+
+![](./assets/corrupteddd_FAT0.gif)
+
+So that must had been the cause of corruption.
+Running **file** on the other two files outputted only _data_ so I inferred that they would be actually backups of the first FAT.
+In order to check that I ran **diff** on them and nothing showed so I could go on and fix the FS that could be done by replacing the picture in FAT0 with FAT1.
+This operation could be done with dd.
+
+
+
