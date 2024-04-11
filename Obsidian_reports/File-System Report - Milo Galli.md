@@ -86,12 +86,12 @@ GUID Partition Table (EFI)
 Offset Sector: 0
 Units are in 512-byte sectors
 
-      Slot           Start           End            Length          Description
-000:  -------        0000000000      0000002047     0000002048      Unallocated
-001:  002            0000002048      0000008158     0000006111      Linux filesystem
-002:  Meta           0000008159      0000008190     0000000032      Partition Table
-003:  -------        0000008159      0000008191     0000000033      Unallocated
-004:  Meta           0000008191      0000008191     0000000001      GPT Header
+      Slot           Start                     End                    Length               Description
+000:  -------      0000000000      0000002047     0000002048      Unallocated
+001:  002           0000002048      0000008158      0000006111       Linux filesystem
+002:  Meta         0000008159      0000008190      0000000032      Partition Table
+003:  -------      0000008159      0000008191       0000000033     Unallocated
+004:  Meta         0000008191      0000008191       0000000001      GPT Header
 ```
 
 From the output of **TSK - mmls** I saw that apparently there was a Linux filesystem located in the first partition so I tried to extract it using **TSK - mmcat** 
@@ -567,4 +567,201 @@ zxgio
 
 # Strange.dd
 
+## Verify the image
+
+```
+> sha256sum --check strange.dd.sha256
+strange.dd: OK
+```
+
+## Analysis
+
+#### What partition scheme has been used for this image?
+
+In order to gather informations about the partition scheme I ran **TSK - mmstat** and **TSK - mmls**
+
+```
+> mmstat strange.dd
+gpt
+
+>mmls strange.dd
+
+GUID Partition Table (EFI)
+Offset Sector: 0
+Units are in 512-byte sectors
+
+      Slot          Start                              End          Length       Description
+000:  Meta       0000000000   0000000000   0000000001   Safety Table
+001:  -------     0000000000   0000002047   0000002048   Unallocated
+002:  Meta       0000000001   0000000001   0000000001   GPT Header
+003:  Meta       0000000002   0000000033   0000000032   Partition Table
+004:  000         0000002048   0016777182   0016775135   Microsoft basic data
+005:  -------   0016777183   0016777215   0000000033   Unallocated
+```
+
+From the output I inferred that the image was partitioned using GPT and in the 4th partition there was _Microsft basic data_ so I tried to extract it and see what was inside
+using **TSK - mmcat**.
+Once extracted I tried to get some informations about the filesystem using **TSK - fsstat**
+
+```
+> mmcat strange.dd 4 > fourth_partition
+> fsstat fourth_partition
+
+Multiple file system types detected (EXT2/3/4 or FAT)
+```
+
+Since the output revealed that there were multiple file-systems living in that partition I analysed them specifying wich one each time with the **-f flag**
+
+```
+> fsstat -f fat fourth_partition
+
+FILE SYSTEM INFORMATION
+--------------------------------------------
+File System Type: FAT32
+
+OEM Name: mkfs.fat
+Volume ID: 0xacd4ced3
+Volume Label (Boot Sector): FAT32LABEL 
+Volume Label (Root Directory): FAT32LABEL 
+File System Type Label: FAT32   
+Next Free Sector (FS Info): 4295003172
+Free Sector Count (FS Info): 0
+
+Sectors before file system: 2048
+
+File System Layout (in sectors)
+Total Range: 0 - 4193782
+* Reserved: 0 - 34867
+** Boot Sector: 0
+** FS Info Sector: 1
+** Backup Boot Sector: 0
+* FAT 0: 34868 - 35891
+* Data Area: 35892 - 4193782
+** Cluster Area: 35892 - 4193779
+*** Root Directory: 35892 - 35899
+** Non-clustered: 4193780 - 4193782
+
+METADATA INFORMATION
+--------------------------------------------
+Range: 2 - 266105029
+Root Directory: 2
+
+CONTENT INFORMATION
+--------------------------------------------
+Sector Size: 2048
+Cluster Size: 16384
+Total Cluster Range: 2 - 519737
+
+FAT CONTENTS (in sectors)
+--------------------------------------------
+35892-35899 (8) -> EOF
+35900-36059 (160) -> EOF
+36060-36227 (168) -> EOF
+36228-36379 (152) -> EOF
+```
+
+```
+> fsstat -f ext fourth_partition
+
+FILE SYSTEM INFORMATION
+--------------------------------------------
+File System Type: Ext3
+Volume Name: ext3label
+Volume ID: 965484d00281318b2241ce90b63aa566
+
+Last Written at: 2022-01-28 09:42:38 (CET)
+Last Checked at: 2022-01-28 08:26:40 (CET)
+
+Last Mounted at: 2022-01-28 09:41:56 (CET)
+Unmounted properly
+Last mounted on: /dir/dev1
+
+Source OS: Linux
+Dynamic Structure
+Compat Features: Journal, Ext Attributes, Resize Inode, Dir Index
+InCompat Features: Filetype, 
+Read Only Compat Features: Sparse Super, Large File, 
+
+Journal ID: 00
+Journal Inode: 8
+
+METADATA INFORMATION
+--------------------------------------------
+Inode Range: 1 - 524289
+Root Directory: 2
+Free Inodes: 524274
+
+CONTENT INFORMATION
+--------------------------------------------
+Block Range: 0 - 2096890
+Block Size: 4096
+Free Blocks: 2027400
+
+BLOCK GROUP INFORMATION
+--------------------------------------------
+Number of Block Groups: 64
+Inodes per group: 8192
+Blocks per group: 32768
+
+Group: 0:
+  Inode Range: 1 - 8192
+  Block Range: 0 - 32767
+  Layout:
+    Super Block: 0 - 0
+    Group Descriptor Table: 1 - 1
+    Data bitmap: 513 - 513
+
+[...]
+```
+
+So there were two working file-systems on the same partition which was kinda strange.
+Next I took a look at both using **TSK - fls** and extracted found files with **TSK - icat** using inodes' numbers
+
+```
+> fls -f fat fourth_partition
+
+r/r 3:	FAT32LABEL  (Volume Label Entry)
+r/r 6:	fat32_nashorn_1.jpg
+r/r 9:	fat32_nashorn_2.jpg
+r/r 12:	fat32_nashorn_3.jpg
+v/v 266105027:	$MBR
+v/v 266105028:	$FAT1
+V/V 266105029:	$OrphanFiles
+
+> fls -f ext fourth_partition
+
+d/d 11:	lost+found
+r/r 24577:	ext3_nashorn_1.jpg
+r/r 24578:	ext3_nashorn_2.jpg
+r/r 24579:	ext3_nashorn_3.jpg
+V/V 524289:	$OrphanFiles
+```
+
+```
+> icat -f fat pippo 6 > jpg1_fat.jpg
+> icat -f fat pippo 9 > jpg2_fat.jpg
+> icat -f fat pippo 12 > jpg3_fat.jpg
+> icat -f ext pippo 24577 > jpg1_ext.jpg
+> icat -f ext pippo 24578 > jpg2_ext.jpg
+> icat -f ext pippo 24579 > jpg3_ext.jpg
+```
+
+Looking at the pictures I saw that they looked the same
+
+![](./assets/jpg1_ext.jpg)
+![](./assets/jpg2_ext.jpg)
+![](./assets/jpg3_ext.jpg)
+
+So I checked their hashes and they were exactly the same
+
+```
+> sha256sum *.jpg
+
+8b79029a06610f29ba1c16e4cd4cf498e196e3a7f67a53efebb32f720f3d472d  jpg1_ext.jpg
+8b79029a06610f29ba1c16e4cd4cf498e196e3a7f67a53efebb32f720f3d472d  jpg1_fat.jpg
+0cb84374324e13606bb22b4164323bb487f9088e4a2cc700673180256174e294  jpg2_ext.jpg
+0cb84374324e13606bb22b4164323bb487f9088e4a2cc700673180256174e294  jpg2_fat.jpg
+193067cecbd63195bfab2f3f702cc44ff3c6e6fa8de5335a405fbeb9955c3512  jpg3_ext.jpg
+193067cecbd63195bfab2f3f702cc44ff3c6e6fa8de5335a405fbeb9955c3512  jpg3_fat.jpg
+```
 
