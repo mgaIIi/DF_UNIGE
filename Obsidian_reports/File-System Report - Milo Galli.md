@@ -590,13 +590,13 @@ GUID Partition Table (EFI)
 Offset Sector: 0
 Units are in 512-byte sectors
 
-      Slot          Start                              End          Length       Description
-000:  Meta       0000000000   0000000000   0000000001   Safety Table
+      Slot        Start        End          Length       Description
+000:  Meta        0000000000   0000000000   0000000001   Safety Table
 001:  -------     0000000000   0000002047   0000002048   Unallocated
-002:  Meta       0000000001   0000000001   0000000001   GPT Header
-003:  Meta       0000000002   0000000033   0000000032   Partition Table
+002:  Meta        0000000001   0000000001   0000000001   GPT Header
+003:  Meta        0000000002   0000000033   0000000032   Partition Table
 004:  000         0000002048   0016777182   0016775135   Microsoft basic data
-005:  -------   0016777183   0016777215   0000000033   Unallocated
+005:  -------     0016777183   0016777215   0000000033   Unallocated
 ```
 
 From the output I inferred that the image was partitioned using GPT and in the 4th partition there was _Microsft basic data_ so I tried to extract it and see what was inside
