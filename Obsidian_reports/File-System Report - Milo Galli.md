@@ -773,5 +773,14 @@ The two seem to overlap seamlessly so I took a look Inside with a hex-editor in 
 ![](./assets/imhex_strangeddhint.png)
 
 Looking at the strings of the image I came across this hint that suggested to look at the "Ambiguous file system partitions".
+The paper provides exactly some examples on how it's possible to have multiple file systems working on the same volume.
+Among them I found one depicting a FAT32 and EXT3 which seemed to fit the partition I analyzed
+
+![](./assets/fat32_ext3_ambiguous.png)
+
+_"The combination of Ext3 and FAT32 appears convenient because the superblock of Ext3 has a fixed offset of 1024 bytes, which provides enough space for another data structure to be placed before"_
+
+So the EXT3 file system serves as a host for the other one.
+FAT32 data areas are marked as damaged so that the host doesn't accidentally overwrite them, making coexistence of file systems possible 
 
 
