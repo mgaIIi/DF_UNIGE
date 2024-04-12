@@ -770,7 +770,7 @@ So I checked their hashes and they were exactly the same
 This image is strange because there are two file-systems working perfectly fine in the same partition without causing troubles of any kind.
 The two seem to overlap seamlessly so I took a look Inside with a hex-editor in order to understand better what was going on
 
-![[imhex_strangeddhint.png]]
+![](imhex_strangeddhint.png)
 
 Looking at the strings of the image I came across this hint that suggested to look at the "Ambiguous file system partitions".
 
