@@ -714,8 +714,8 @@ Group: 0:
 [...]
 ```
 
-So there were two working file-systems on the same partition which was kinda strange.
-Next I took a look at both using **TSK - fls** and extracted found files with **TSK - icat** using inodes' numbers
+So there were two working file-systems on the same partition.
+Pondering that I took a look at both using **TSK - fls** and extracted found files with **TSK - icat** using inodes' numbers
 
 ```
 > fls -f fat fourth_partition
@@ -764,4 +764,14 @@ So I checked their hashes and they were exactly the same
 193067cecbd63195bfab2f3f702cc44ff3c6e6fa8de5335a405fbeb9955c3512  jpg3_ext.jpg
 193067cecbd63195bfab2f3f702cc44ff3c6e6fa8de5335a405fbeb9955c3512  jpg3_fat.jpg
 ```
+
+#### What is so strange about this image?
+
+This image is strange because there are two file-systems working perfectly fine in the same partition without causing troubles of any kind.
+The two seem to overlap seamlessly so I took a look Inside with a hex-editor in order to understand better what was going on
+
+![[imhex_strangeddhint.png]]
+
+Looking at the strings of the image I came across this hint that suggested to look at the "Ambiguous file system partitions".
+
 
