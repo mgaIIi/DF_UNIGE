@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "File-System Report - Milo Galli.md",
+                "file": "Windows Report - Milo Galli.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "File-System Report - Milo Galli.md",
+                "file": "Windows Report - Milo Galli.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "File-System Report - Milo Galli.md",
+                "file": "Windows Report - Milo Galli.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "File-System Report - Milo Galli.md"
+                "file": "Windows Report - Milo Galli.md"
               }
             }
           }
@@ -148,6 +148,8 @@
   },
   "active": "48a351e211d81aaf",
   "lastOpenFiles": [
+    "File-System Report - Milo Galli.md",
+    "Windows Report - Milo Galli.md",
     "assets/fat32_ext3_ambiguous.png",
     "assets/imhex_strangeddhint.png",
     "assets/jpg3_ext.jpg",
@@ -155,12 +157,10 @@
     "assets/jpg1_ext.jpg",
     "assets/zxgio_0x200.png",
     "assets/corrupteddd_FAT0.gif",
-    "File-System Report - Milo Galli.md",
     "assets/lastsectors.jpg",
     "assets/lastsectors",
     "assets/corrupteddd_hexeditor.png",
     "Digital Forensics/assets/ps5jpg_extracted.jpg",
-    "Digital Forensics/assets/xboxjpg_extracted.jpg",
     "Digital Forensics/File-System Report - Milo Galli.md",
     "Digital Forensics/assets",
     "Digital Forensics/Computer Foundations/Computer Foundations.md",
