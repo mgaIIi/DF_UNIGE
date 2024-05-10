@@ -1,22 +1,18 @@
 {
   "main": {
-    "id": "8ecf5c755c89d7a4",
+    "id": "fd720a5926908053",
     "type": "split",
     "children": [
       {
-        "id": "cd2770012e1f223f",
+        "id": "198a3f13c6a62218",
         "type": "tabs",
         "children": [
           {
-            "id": "48a351e211d81aaf",
+            "id": "edc901971b9f4fc3",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Windows Forensics - Milo Galli.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -25,15 +21,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "960901aba7d53272",
+    "id": "c4ac326276b7b26e",
     "type": "split",
     "children": [
       {
-        "id": "f6cd9096cb1cbe01",
+        "id": "2bfad52bb06ead5b",
         "type": "tabs",
         "children": [
           {
-            "id": "7c1f0b818abfe434",
+            "id": "7657183ca0f5db1b",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -43,7 +39,7 @@
             }
           },
           {
-            "id": "7496163acb16479d",
+            "id": "6c26063b68b80b8c",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -58,7 +54,7 @@
             }
           },
           {
-            "id": "b8881b72e17c342b",
+            "id": "b0937a04c4c30a25",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -69,23 +65,23 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
-    "id": "aaae98ad6bcc5d33",
+    "id": "8c0d0d93b14e720c",
     "type": "split",
     "children": [
       {
-        "id": "42bbd0ca0ff07d87",
+        "id": "3bfd757c6180f9a4",
         "type": "tabs",
         "children": [
           {
-            "id": "1cd3c267010083ca",
+            "id": "2796506ba6d6196c",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Windows Forensics - Milo Galli.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,19 +93,18 @@
             }
           },
           {
-            "id": "205963c3418c29ae",
+            "id": "1f96f207b651a91a",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Windows Forensics - Milo Galli.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "dd3e301c0217237a",
+            "id": "503d43bb1d3bf5cc",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -120,13 +115,11 @@
             }
           },
           {
-            "id": "58d4909b793be243",
+            "id": "b7894b234b5f56d2",
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Windows Forensics - Milo Galli.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -146,25 +139,6 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "48a351e211d81aaf",
-  "lastOpenFiles": [
-    "File-System Report - Milo Galli.md",
-    "Windows Report - Milo Galli.md",
-    "assets/fat32_ext3_ambiguous.png",
-    "assets/imhex_strangeddhint.png",
-    "assets/jpg3_ext.jpg",
-    "assets/jpg2_ext.jpg",
-    "assets/jpg1_ext.jpg",
-    "assets/zxgio_0x200.png",
-    "assets/corrupteddd_FAT0.gif",
-    "assets/lastsectors.jpg",
-    "assets/lastsectors",
-    "assets/corrupteddd_hexeditor.png",
-    "Digital Forensics/assets/ps5jpg_extracted.jpg",
-    "Digital Forensics/File-System Report - Milo Galli.md",
-    "Digital Forensics/assets",
-    "Digital Forensics/Computer Foundations/Computer Foundations.md",
-    "Digital Forensics/Computer Foundations",
-    "Digital Forensics"
-  ]
+  "active": "edc901971b9f4fc3",
+  "lastOpenFiles": []
 }
