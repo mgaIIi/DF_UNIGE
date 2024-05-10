@@ -37,8 +37,6 @@ The target's name is Sarah McAvoy and looking at the image with different tools 
  
 ## 1 / 26 / 2017
 The use Sarah McAvoy was created as administrator.
-The target searched on amazon for owls and also downloaded a pdf file on great horned owls.
-
 ## 1 / 27 / 2017
 
 The target downloaded and set up Chrome at 00:54:30 and Skype right after.
@@ -54,7 +52,7 @@ She then accessed and modified some photos contained in the desktop picturing ow
 The target opened also a pdf file called **"Great Horned Owl Info.pdf"** at 01:16:48 PM.
 A jpg file named **Pigmy Owl.jpg** was accessed at 17:23:29.
 
-In a timespan that goes from 17:59:39 PM to 18:06 PM the target visited a website that sold owls from the UK ( www.birdtrader.co.uk) and other sites about owls.
+In a time span that goes from 17:59:39 PM to 18:06 PM the target visited a website that sold owls from the UK ( www.birdtrader.co.uk) and other sites about owls.
 
 The sites visited included: 
 - www.reference.com/pets-animals" -> 
@@ -77,15 +75,16 @@ The sites visited included:
 	- Northern Spotted owl continues to decline
 
 The target visited again the site "www.birdtrader.co.uk" at 18:31 PM looking at different owls' breeds and visited also "www.amazon.com" for 10 additional minutes.
+Then she deleted some images that she had previously downloaded, not emptying the bin.
 
 ## 1 / 28 /2017
 
-At 22:46 PM the target wento online on "www.youtube.com" and searched for "How to take care of owls", then looking at videos:
+At 22:46 PM the target went online on "www.youtube.com" and searched for "How to take care of owls", then looking at videos:
 - "Owls to you, How it all started"
 - "What to do if you want to pet an owl"
 
-The target then in a timespan that goes from 23:28 PM to 23:23 logged on yahoo-messanger and tumblr.
-On tumblr she looked at different content reguarding owls ( https://itsdrhoo.tumblr.com/)
+The target then in a time span that goes from 23:28 PM to 23:23 logged on yahoo-messanger and tumblr.
+On tumblr she looked at different content regarding owls ( https://itsdrhoo.tumblr.com/)
 After that she looked on www.etsy.com at 23:40 PM the keyword "owl".
 
 During the whole browsing she visited multiple times www.gmail.com with the following account :
@@ -111,12 +110,14 @@ The target downloaded, set up and accessed Pidgin, which is a multi-platform app
 
 ## 2/ 2 / 2017
 
-The target downloaded and accessed **"Yahoo-messanger"** at 10:25:11 PM
-The target accessed a jpg file called **"My New Pet.jpg"** at 22:38:25
-The target accessed a pdf file called **"Owl Emergency Care.jpg"** at 22:39:08
-The target executed Chrome at 21:57:10
-The target opened a folder called **"New Pet Care"** at 22:39:08
-
+The target :
+- Executed Chrome at 21:57:10
+- Downloaded and accessed **"Yahoo-messanger"** at 22:25:11
+- Accessed a jpg file called **"My New Pet.jpg"** at 22:38:25
+- Accessed a pdf file called **"Snowy Owl Care"** at 22:38:36
+- Accessed a pdf file called **"Snowy Owl.pdf"** at 22:38:39
+- Accessed a pdf file called **"Owl Emergency Care.jpg"** at 22:39:08
+- Opened a folder called **"New Pet Care"** at 22:39:08
 
 The last jpg file opened was at 21:53:32 and was a file named **"My new Pet"** 21:53:32
 
