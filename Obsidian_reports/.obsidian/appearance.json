@@ -1,7 +1,8 @@
 {
   "accentColor": "#e294ff",
-  "cssTheme": "Minimal",
+  "cssTheme": "Catppuccin",
   "textFontFamily": "Inter",
   "monospaceFontFamily": "Inter",
-  "interfaceFontFamily": "Inter"
+  "interfaceFontFamily": "Inter",
+  "theme": "obsidian"
 }

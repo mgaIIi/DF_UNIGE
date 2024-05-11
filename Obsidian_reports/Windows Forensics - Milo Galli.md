@@ -5,20 +5,20 @@ Build a timeline of events for the HD01.E01 forensic image
 
 Submit
 
-    A spreadsheet with a detailed timeline
-    A document explaining what happened on the system in each day in which it was used
+A spreadsheet with a detailed timeline
+A document explaining what happened on the system in each day in which it was used
 
 The spreadsheet must contain, at least, the following elements:
 
-    MFT (for relevant files)
-    System Registry
-    User Registry
-    LNK files
-    Jumplists
-    Shellbags
-    USB device analysis
-    Prefetch
-    Google Chrome
+- MFT (for relevant files)
+- System Registry
+- User Registry
+- LNK files
+- Jumplists
+- Shellbags
+- USB device analysis
+- Prefetch
+- Google Chrome
 ```
 
 # Timeline Creation
@@ -42,16 +42,14 @@ The use Sarah McAvoy was created as administrator.
 The target downloaded and set up Chrome at 00:54:30 and Skype right after.
 
 She then accessed and modified some photos contained in the desktop picturing owls: 
-- **"Snowy Owl.jpg"** -> 5:19:18 PM
-- **"Pigmy Owl.jpg"** -> 17:23:29 PM
+- **"Snowy Owl.jpg"** -> 17:19:18
+- **"Pigmy Owl.jpg"** -> 17:23:29
 - **"Luna owl"** -> 
-- **"Snowy Owl2.jpg"** -> 5:33:22 PM
-- **"Snowy Owl3.jpg"**-> 5:33:24 PM
-- **"Snowy Owl4.jpg"** -> 5:33:24 PM
+- **"Snowy Owl2.jpg"** -> 17:33:22
+- **"Snowy Owl3.jpg"**-> 17:33:24
+- **"Snowy Owl4.jpg"** -> 17:33:24
 
-The target opened also a pdf file called **"Great Horned Owl Info.pdf"** at 01:16:48 PM.
-A jpg file named **Pigmy Owl.jpg** was accessed at 17:23:29.
-
+The target opened also a pdf file called **"Great Horned Owl Info.pdf"** at 14:16:48.
 In a time span that goes from 17:59:39 PM to 18:06 PM the target visited a website that sold owls from the UK ( www.birdtrader.co.uk) and other sites about owls.
 
 The sites visited included: 
@@ -85,7 +83,7 @@ At 22:46 PM the target went online on "www.youtube.com" and searched for "How to
 
 The target then in a time span that goes from 23:28 PM to 23:23 logged on yahoo-messanger and tumblr.
 On tumblr she looked at different content regarding owls ( https://itsdrhoo.tumblr.com/)
-After that she looked on www.etsy.com at 23:40 PM the keyword "owl".
+After that she looked on www.etsy.com at 23:40 PM the keyword "owl" probably in order to try to purchase an owl there.
 
 During the whole browsing she visited multiple times www.gmail.com with the following account :
 - mcavoys87@gmail.com
@@ -94,9 +92,10 @@ The target looked on the web for snowy owls and saved photos on the pc but she t
 
 ## 1 /  31 / 2017
 
-The target downloaded two pdf files about owl's care and accessed them:
-- **"Owl_Emergency_Care.pdf"** -> 7:09:01 PM
-- **"Owl_Keeping.pdf"** -> 7:09:11 PM
+The target downloaded some pdf files about owl's care and accessed them:
+- **"Owl_Emergency_Care.pdf"** -> 20:10:07
+- **"Owl_Keeping.pdf"** -> 20:10:20
+- **"Snowy Owl.pdf"** -> 20:14:57
 
 As well as a xls files about Snowy owls:
 - **"Bibliography - Snowy Owl 14 April 2014- GLOW posting.xls"** -> 7:12:44 PM
@@ -114,7 +113,7 @@ The target :
 - Executed Chrome at 21:57:10
 - Downloaded and accessed **"Yahoo-messanger"** at 22:25:11
 - Accessed a jpg file called **"My New Pet.jpg"** at 22:38:25
-- Accessed a pdf file called **"Snowy Owl Care"** at 22:38:36
+- Accessed a pdf file called **"Snowy Owl Care.pdf"** at 23:00:17
 - Accessed a pdf file called **"Snowy Owl.pdf"** at 22:38:39
 - Accessed a pdf file called **"Owl Emergency Care.jpg"** at 22:39:08
 - Opened a folder called **"New Pet Care"** at 22:39:08
