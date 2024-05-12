@@ -33,10 +33,7 @@ The complete timeline can be found in the "Timeline" folder along with a set of 
 In a jurisdiction where Owls are illegal to trade and buy, two users are discussing the illegal trade of owls. The computer and mobile device taken into evidence are of a user who is attempting to purchase owls illegally. The user has contacted another user who can provide an owl in exchange for cash. An owl is decided upon, and an exchange is scheduled. After the exchange, a communication message is sent confirming the owl purchase has been completed.
 ```
 
-The target's name is Sarah McAvoy and looking at the image with different tools it appears that her activity was condensed in a time-span from **1/26/2017** to **2/2/2017**
- 
-## 1 / 26 / 2017
-The use Sarah McAvoy was created as administrator.
+The target's name is Sarah McAvoy and looking at the image with different tools it appears that her activity was condensed in a time-span from **1/27/2017** to **2/2/2017**
 ## 1 / 27 / 2017
 
 The target downloaded and set up Chrome at 00:54:30 and Skype right after.
@@ -44,7 +41,7 @@ The target downloaded and set up Chrome at 00:54:30 and Skype right after.
 She then accessed and modified some photos contained in the desktop picturing owls: 
 - **"Snowy Owl.jpg"** -> 17:19:18
 - **"Pigmy Owl.jpg"** -> 17:23:29
-- **"Luna owl"** -> 
+- **"Luna owl"** -> 17:23:29
 - **"Snowy Owl2.jpg"** -> 17:33:22
 - **"Snowy Owl3.jpg"**-> 17:33:24
 - **"Snowy Owl4.jpg"** -> 17:33:24
@@ -75,6 +72,8 @@ The sites visited included:
 The target visited again the site "www.birdtrader.co.uk" at 18:31 PM looking at different owls' breeds and visited also "www.amazon.com" for 10 additional minutes.
 Then she deleted some images that she had previously downloaded, not emptying the bin.
 
+Received a lot of emails from 18:33 with email title **"Owls for sale"** to which she responded.
+
 ## 1 / 28 /2017
 
 At 22:46 PM the target went online on "www.youtube.com" and searched for "How to take care of owls", then looking at videos:
@@ -90,6 +89,9 @@ During the whole browsing she visited multiple times www.gmail.com with the foll
 
 The target looked on the web for snowy owls and saved photos on the pc but she then deleted all of the owl pictures.
 
+## 1 / 29 / 2017
+
+## 1 / 30 / 2017
 ## 1 /  31 / 2017
 
 The target downloaded some pdf files about owl's care and accessed them:
@@ -100,12 +102,16 @@ The target downloaded some pdf files about owl's care and accessed them:
 As well as a xls files about Snowy owls:
 - **"Bibliography - Snowy Owl 14 April 2014- GLOW posting.xls"** -> 7:12:44 PM
 
-The target also accessed a pdf file named **Snowy_Owl.pdf** located in the Desktop folder at 19:12:19
-The target executed for the last time Skype at 19:26:31
+The target also accessed a pdf file named **Snowy_Owl.pdf** located in the Desktop folder at 19:12:19.
+The target executed for the last time Skype at 19:26:31.
+During her usage of the application she chatted with some friends about topics that didn't involve owls.
 
 ## 2 / 1 / 2017 
 
 The target downloaded, set up and accessed Pidgin, which is a multi-platform app for instant messaging, at 4:59:37 PM.
+
+Looking at the **C:/Users/Sarah\ M/AppData/Roaming/.purple** configuration folder we can say that she registered a Gmail and a Facebook account using for both the email address **"mcavoys87@gmail.com"**.
+
 
 ## 2/ 2 / 2017
 
