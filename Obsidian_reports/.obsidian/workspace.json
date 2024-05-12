@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "cd2770012e1f223f",
+        "id": "3769a68ce49027ce",
         "type": "tabs",
         "children": [
           {
-            "id": "48a351e211d81aaf",
+            "id": "c7ffdacea0b56f79",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Windows Forensics - Milo Galli.md",
+                "file": "Windows Forensics Report - Milo Galli.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Windows Forensics - Milo Galli.md",
+                "file": "Windows Forensics Report - Milo Galli.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Windows Forensics - Milo Galli.md",
+                "file": "Windows Forensics Report - Milo Galli.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Windows Forensics - Milo Galli.md"
+                "file": "Windows Forensics Report - Milo Galli.md"
               }
             }
           }
@@ -146,10 +146,15 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "48a351e211d81aaf",
+  "active": "c7ffdacea0b56f79",
   "lastOpenFiles": [
-    "File-System Report - Milo Galli.md",
+    "Network Forensics Report - Milo Galli.md",
+    "File-System Forensics Report - Milo Galli.md",
+    "Windows Forensics Report - Milo Galli.md",
+    "- Milo Galli.md",
+    "Network Forensics Report",
     "Windows Forensics - Milo Galli.md",
+    "File-System Report - Milo Galli.md",
     "Windows Report - Milo Galli.md",
     "assets/fat32_ext3_ambiguous.png",
     "assets/imhex_strangeddhint.png",
