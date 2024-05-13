@@ -102,13 +102,13 @@ At **18:33** we have a major spike in our analysis since the target visited a Gm
 
 
 
-![](/Users/milogalli/Desktop/Milo/DF_UNIGE/Obsidian_reports/assets/Owlsforsale_email_attachment.png)
+![](./assets/Owlsforsale_email_attachment.png)
 
-![](/Users/milogalli/Desktop/Milo/DF_UNIGE/Obsidian_reports/assets/Owlsforsale_email_attachment2.png)
+![](./assets/Owlsforsale_email_attachment2.png)
 
-![](/Users/milogalli/Desktop/Milo/DF_UNIGE/Obsidian_reports/assets/Owlsforsale_email_attachment3.png)
+![](./assets/Owlsforsale_email_attachment3.png)
 
-![](/Users/milogalli/Desktop/Milo/DF_UNIGE/Obsidian_reports/assets/Owlsforsale_email_attachment4.png)
+![](./assets/Owlsforsale_email_attachment4.png)
 
 Considering that we can assume that the target came in touch with someone met online after visiting the previously cited websites and contacted him/her via email in order to purchase an owl.
 
