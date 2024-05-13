@@ -96,21 +96,35 @@ Then she deleted some images that she had previously downloaded, not emptying th
 
 At **18:33** we have a major spike in our analysis since the target visited a Gmail inbox url with title **"Owls for sale"** and downloaded some jpg photos attached with the following names: 
 
-- **"Snowy Owl2.jpg"** -> 18:33:22
-- **"Snowy Owl3.jpg"**-> 18:33:24
-- **"Snowy Owl4.jpg"** -> 18:33:24
+- **"Snowy Owl2.jpg"**
+- **"Snowy Owl3.jpg"**
+- **"Snowy Owl4.jpg"**
+
+
 
 ![](./assets/Owlsforsale_email_attachment.png)
 
+*Snowy Owl.jpg attachment download evidence*
+
 ![](./assets/Owlsforsale_email_attachment2.png)
+
+*Snowy Owl2.jpg attachment download evidence*
 
 ![](./assets/Owlsforsale_email_attachment3.png)
 
+*Snowy Owl3.jpg attachment download evidence*
+
 ![](./assets/Owlsforsale_email_attachment4.png)
+
+*Snowy Owl4.jpg attachment download evidence*
+
+
 
 Considering that we can assume that the target came in touch with someone met online after visiting the previously cited websites and contacted him/her via email in order to purchase an owl.
 
-The trader sent her some snowy owls available for purchase at the moment discussed.
+The trader sent her some snowy owls available for purchase at the moment of contact
+
+.
 
 ## 1/28/2017
 
