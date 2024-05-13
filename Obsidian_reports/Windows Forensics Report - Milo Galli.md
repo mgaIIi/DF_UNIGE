@@ -42,7 +42,7 @@ confirming the owl purchase has been completed.
 
 The target's name is Sarah McAvoy and looking at the image with different tools it appears that her activity was condensed in a time-span from **1/27/2017** to **2/2/2017**
 
-## 1 / 27 / 2017
+## 1/27/2017
 
 The target downloaded and set up Chrome at **00:54** and  surfed the web looking at different topics all related to mythical beasts and harry potter, especially owls.
 
@@ -91,18 +91,30 @@ The sites visited included:
 - **barnowltrust.org.uk** ->
   - Thinking of keeping a captive Barn Owl?
 
-The target visited again the site **"www.birdtrader.co.uk"** at **18:31** looking at different owls' breeds and visited also **"www.amazon.com"** for 10 additional minutes.
+The target visited again the site **"www.birdtrader.co.uk"** at **18:31** looking at different owls' breeds and a catalogue of all the owls available for purchase at the moment. After that she visited also **"www.amazon.com"** for 10 additional minutes.
 Then she deleted some images that she had previously downloaded, not emptying the bin.
 
-At **18:33** we have a major spike in our analysis since the target visited a Gmail inbox url with title **"Owls for sale"** and at the same hour she downloaded and accessed some photos with the following names: 
+At **18:33** we have a major spike in our analysis since the target visited a Gmail inbox url with title **"Owls for sale"** and downloaded some jpg photos attached with the following names: 
 
 - **"Snowy Owl2.jpg"** -> 18:33:22
 - **"Snowy Owl3.jpg"**-> 18:33:24
 - **"Snowy Owl4.jpg"** -> 18:33:24
 
-Considering that we can assume that the target came in touch with someone met online after visiting the previously cited websites and contacted him/her via email in order to purchase an owl, whose characteristics and price where discussed via gmail messages.
 
-## 1 / 28 /2017
+
+![](/Users/milogalli/Desktop/Milo/DF_UNIGE/Obsidian_reports/assets/Owlsforsale_email_attachment.png)
+
+![](/Users/milogalli/Desktop/Milo/DF_UNIGE/Obsidian_reports/assets/Owlsforsale_email_attachment2.png)
+
+![](/Users/milogalli/Desktop/Milo/DF_UNIGE/Obsidian_reports/assets/Owlsforsale_email_attachment3.png)
+
+![](/Users/milogalli/Desktop/Milo/DF_UNIGE/Obsidian_reports/assets/Owlsforsale_email_attachment4.png)
+
+Considering that we can assume that the target came in touch with someone met online after visiting the previously cited websites and contacted him/her via email in order to purchase an owl.
+
+The trader sent her some snowy owls available for purchase at the moment discussed.
+
+## 1/28/2017
 
 This hypothesis finds another traction point because at  22:46 PM the target went online on **www.youtube.com** and searched for "How to take care of owls", then looking at videos:
 
@@ -121,7 +133,7 @@ The target looked on the web for snowy owls and saved photos on the pc but she t
 
 The hyphotesis here is that she received a offer for the purchase of a snowy owl and she considered it while browising on other online shops looking for the same animal, but finally accapting the offer and deleting other possible purchases.
 
-## 1 /  31 / 2017
+## 1/31/2017
 
 The target downloaded some pdf files about owl's care and accessed them at 20:10 :
 
