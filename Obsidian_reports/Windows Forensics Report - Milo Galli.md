@@ -100,8 +100,6 @@ At **18:33** we have a major spike in our analysis since the target visited a Gm
 - **"Snowy Owl3.jpg"**-> 18:33:24
 - **"Snowy Owl4.jpg"** -> 18:33:24
 
-
-
 ![](./assets/Owlsforsale_email_attachment.png)
 
 ![](./assets/Owlsforsale_email_attachment2.png)
@@ -116,14 +114,13 @@ The trader sent her some snowy owls available for purchase at the moment discuss
 
 ## 1/28/2017
 
-This hypothesis finds another traction point because at  22:46 PM the target went online on **www.youtube.com** and searched for "How to take care of owls", then looking at videos:
+The target didn't produce any relevant data until **22:46** when she went online on **www.youtube.com** and searched for **"How to take care of owls"** looking at these videos:
 
-- "Owls to you, How it all started"
-- "What to do if you want to pet an owl"
+- **"Owls to you, How it all started"**
+- **"What to do if you want to pet an owl"**
 
-The target then in a time span that goes from 23:28 PM to 23:23 logged on yahoo-messanger and tumblr.
-On tumblr she looked at different content regarding owls ( https://itsdrhoo.tumblr.com/)
-After that she looked on www.etsy.com at 23:40 PM the keyword "owl".
+The target then in a time span that goes from **23:28** to **23:23** logged-in on Yahoo-messanger and Tumblr where she looked at different content regarding owls ( e.g. https://itsdrhoo.tumblr.com/ ).
+After that she l on **www.etsy.com** at **23:40** the keyword "owl", 
 
 During the whole browsing she visited multiple times www.gmail.com with the following account
 
