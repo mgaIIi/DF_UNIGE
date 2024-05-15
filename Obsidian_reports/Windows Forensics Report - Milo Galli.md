@@ -163,11 +163,13 @@ There is no relevant data to be documented for this day.
 
 ## User activity [ 1/30/2017 ]
 
-The only thing relevant for this day is that the target exchanged emails with someone at **23:50** using the account **mcavoys87@gmail.com**.
+The target chatted over **Skype** not mentioning anything related to owls in a time-span that goes from **19:47** until **23:13** and surfed looking mostly at videos on youtube.
+
+The target exchanged emails with someone at **23:50** using the account **mcavoys87@gmail.com** and accessed the google contacts page 2 minutes after.
 
 ## User activity [ 1/31/2017 ]
 
-No relevant activity was spotted until 19:08 when the target downloaded some pdf files about owl's care and accessed them:
+No relevant activity was spotted until **19:08** when the target downloaded some pdf files about owl's care and accessed them:
 
 - **"Owl_Emergency_Care.pdf"**
 - **"Owl_Keeping.pdf"**
@@ -197,8 +199,6 @@ After that at **18:23** she used **Google Hangouts** to chat with someone.
 The hypothesis is that she downloaded the Pidgin app in order to chat with the bird trader she had previously contatcted via Gmail
 
 ## User activity [ 2/ 2 / 2017 ]
-
-The target executed for the last time Pidgin at 21:20
 
 Nothing relevant happens until **22:00** when the target accesses a file named **"My New Pet.jpg"** contained in the folder **"New Pet Care"**.
 
