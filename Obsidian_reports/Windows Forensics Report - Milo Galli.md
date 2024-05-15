@@ -106,7 +106,7 @@ The sites visited included:
   - What should you know about having an owl for a pet
 - **www.abcbirds.com** ->
   - Northern Spotted owl continues to decline
-- **barnowltrust.org.uk** ->
+- **www.barnowltrust.org.uk** ->
   - Thinking of keeping a captive Barn Owl?
 
 The target visited again the site **"www.birdtrader.co.uk"** at **18:31** looking at different owls' breeds and a catalogue of all the owls available for purchase at the moment. After that she visited also **"www.amazon.com"** for 10 additional minutes.
@@ -138,11 +138,7 @@ At **18:33** we have a major spike in our analysis since the target visited a Gm
 
 Considering that we can assume that the target came in touch with someone met online after visiting the previously cited websites and contacted him/her via email in order to purchase an owl.
 
-The trader sent her some snowy owls available for purchase
-
- at the moment of contact
-
-.
+The trader sent her some snowy owls available for purchase at the moment of contact.
 
 ## User activity [ 1/28/2017 ]
 
