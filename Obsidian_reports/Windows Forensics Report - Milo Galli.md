@@ -46,17 +46,17 @@ The target's name is Sarah McAvoy and looking at the image with different tools 
 
 ## 1/27/2017
 
-The target downloaded and set up Chrome at **00:54** and  surfed the web looking at different topics all related to mythical beasts and harry potter, especially owls.
+The target downloaded and set up Chrome at **00:55** and  surfed the web looking at different topics all related to mythical beasts and harry potter, especially owls.
 
-At **01:06** she downloaded and accessed three jpg files:
+At **01:06** she downloaded three jpg files:
 
 - **"Snowy Owl.jpg"** 
 - **"Pigmy Owl.jpg"**
 - **Great Horned Owl.jpg"**
 
-She then downloaded and opened a pdf file called **"Great Horned Owl Info.pdf"** at **01:16**.
+At  **01:16** she then downloaded and opened a pdf file called **"Great Horned Owl Info.pdf"** and half an hour later she installed also the **Skype** application and atteched a usb external webcam but didn't make any calls.
 
-At **2:12** she made some researches on **www.amazon.com** looking for **"owl eggs"**  and at minute after at **2:13** she then visited **www.21food.com** looking for **"Fertile Snowy Owl eggs for sale**.
+At **2:06** the target opened a file named **Luna-Owl.jpg** and some minutes later she searched on **www.amazon.com** and  **www.21food.com** looking respectevly for **"owl eggs"** and **"Fertile Snowy Owl eggs for sale**.
 
 At **2:47** the target downloaded Skype and set it up but didn't use the app to make any call.
 
@@ -149,13 +149,13 @@ The only thing relevant for this day is that the target exchanged emails with so
 
 ## 1/31/2017
 
-The target downloaded some pdf files about owl's care and accessed them at **19:08**:
+No relevant activity was spotted until 19:08 when the target downloaded some pdf files about owl's care and accessed them:
 
 - **"Owl_Emergency_Care.pdf"**
 - **"Owl_Keeping.pdf"**
 - **"Snowy Owl.pdf"**
 
-Then at **19:27** she accessed a file contained in the Desktop folder named **"Next Pet.jpg"**.
+Then at **19:27** she accessed a file contained in the Desktop folder named **"Next Pet.jpg"** and then created a folder named **"New Pet Care"** at **20:10**.
 
 After that there nothing relevant happened until **20:21** when during a youtube session she looked for these topics:
 
@@ -164,13 +164,13 @@ After that there nothing relevant happened until **20:21** when during a youtube
 
 And right after looked again at the pdfs recently visited and also other documents regarding snowy owls' care like a xls file named **"Bibliography - Snowy Owl 14 April 2014- GLOW posting.xls"**.
 
-Then the target continued surfing the web especially watching videos in youtube until
+Then the target continued surfing the web especially watching videos in youtube until **20:16** when she moved some file to recycle bin without emptying it and started using the **Skype** application.
 
-**21:01** when she used the **Skype** application but during  the usage she chatted with some friends about topics that didn't involve owls.
+During  the usage  she chatted with some friends about topics that didn't involve owls./org/freedesktop/UPower/devices/DisplayDevice
 
 ## 2 / 1 / 2017
 
-There is no relevant activity until **17:59** when the target downloaded, set up and accessed Pidgin, which is a multi-platform app for instant messaging, looking also at  the *about* page and the software's manual in the following minutes
+There is no relevant activity until **17:59** when the target downloaded, set up and accessed **Pidgin**, which is a multi-platform app for instant messaging, looking also at  the *about* page and the software's manual in the following minutes
 
 Looking at the **C:/Users/Sarah\ M/AppData/Roaming/.purple** configuration folder we can say that she tried to register a Gmail and a Facebook account using for both the email address **"mcavoys87@gmail.com"** around **18:00**.
 
@@ -182,9 +182,17 @@ The hypothesis is that she downloaded the Pidgin app in order to chat with the b
 
 The target executed for the last time Pidgin at 21:2
 
-Nothing relevant happens until **22:00** when the target accesses a file named **"My New Pet.jpg"** contained in the folder **"New Pet Care"** and right after at **22:29**  she accessed **Gmail** and composed a email.
+Nothing relevant happens until **22:00** when the target accesses a file named **"My New Pet.jpg"** contained in the folder **"New Pet Care"**.
+
+Right after at **22:25** she ran **Pidgin** and at  **22:29**  she composed a email using her Gmail account.
 
 Then at **22:38** she accessed again the file **"My New Pet.jpg"** along with two other pdf files named **"Snowy Owl Care.pdf"** and **"Snowy Owl.pdf"** that she previously downloaded and moved them in them in the folder **New Pet Care**.
+
+At **22:53** she accessed a new volume, **:F**, a USB drive with **80BC89A2** as serial number where she moved these files:
+
+- **My New Pet.jpg**
+- **Snowy Owl Care.pdf**
+- **Snowy Owl.pdf**
 
 From these informations we might infer that the target actually purchased a Snowy Owl and was now gathering informations to take care for it.
 
@@ -192,11 +200,4 @@ Our suspects get actually more concrete when at **22:39** the target accesses a 
 
 At **22:57** she composed numerous emails on Gmail and in the following hours she went  back and forward between Youtube, Facebook, Yahoo-Messanger, Tumblr  and Gmail as she was waiting for a response from someone
 
-
-
-
-These files were moved to a USB drive with **80BC89A2** as serial number:
-
-- My New Pet.jpg
-- Snowy Owl Care.pdf
-- Snowy Owl.pdf
+At **23:38** she attached a USB device and at right after looked at the **Snowy Owl Care.pdf** file

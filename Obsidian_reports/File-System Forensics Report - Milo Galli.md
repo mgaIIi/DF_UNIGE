@@ -20,11 +20,11 @@ I started by running **TSK - fls** to list files and directories in the image si
 ```
 > fls console.dd
 
-r/r 4:	xbox.jpg
-v/v 130867:	$MBR
-v/v 130868:	$FAT1
-v/v 130869:	$FAT2
-V/V 130870:	$OrphanFiles
+r/r 4:    xbox.jpg
+v/v 130867:    $MBR
+v/v 130868:    $FAT1
+v/v 130869:    $FAT2
+V/V 130870:    $OrphanFiles
 ```
 
 There was indeed a JPEG file that I could analyse so I extracted it directly by its name using  **TSK - fcat** 
@@ -35,9 +35,7 @@ fcat xbox.jpg console.dd > xboxjpg_extracted.jpg
 
 ![](./assets/xboxjpg_extracted.jpg)
 
-
 After that I ran **TSK - fsstat** to display general details of the file-system provided and **TSK - mmls** to get the partition layout.
-
 
 ```
 > fsstat console.dd
@@ -151,23 +149,23 @@ Just as I did before I ran **TSK - fls** on the new image to list files and dire
 
 ```
 > fls liuxfs_extracted.dd
-r/r 4-128-1:	$AttrDef
-r/r 8-128-2:	$BadClus
-r/r 8-128-1:	$BadClus:$Bad
-r/r 6-128-1:	$Bitmap
-r/r 7-128-1:	$Boot
-d/d 11-144-2:	$Extend
-r/r 2-128-1:	$LogFile
-r/r 0-128-1:	$MFT
-r/r 1-128-1:	$MFTMirr
-r/r 9-128-2:	$Secure:$SDS
-r/r 9-144-3:	$Secure:$SDH
-r/r 9-144-4:	$Secure:$SII
-r/r 10-128-1:	$UpCase
-r/r 10-128-2:	$UpCase:$Info
-r/r 3-128-3:	$Volume
-r/r 64-128-2:	ps5.jpg
-V/V 65:	$OrphanFiles
+r/r 4-128-1:    $AttrDef
+r/r 8-128-2:    $BadClus
+r/r 8-128-1:    $BadClus:$Bad
+r/r 6-128-1:    $Bitmap
+r/r 7-128-1:    $Boot
+d/d 11-144-2:    $Extend
+r/r 2-128-1:    $LogFile
+r/r 0-128-1:    $MFT
+r/r 1-128-1:    $MFTMirr
+r/r 9-128-2:    $Secure:$SDS
+r/r 9-144-3:    $Secure:$SDH
+r/r 9-144-4:    $Secure:$SII
+r/r 10-128-1:    $UpCase
+r/r 10-128-2:    $UpCase:$Info
+r/r 3-128-3:    $Volume
+r/r 64-128-2:    ps5.jpg
+V/V 65:    $OrphanFiles
 ```
 
 From the output I saw that there was another jpg picture so I extracted it as well
@@ -226,15 +224,18 @@ In order to understand whether the image is bootable or not we can take a look w
 
 ![](./assets/corrupteddd_hexeditor.png)
 
-As we can see the image seems not to be bootable.
+As we can see the image seems to be not bootable.
 
 #### What is the volume label?
+
 From **TSK - fsstat** : **BILL**
 
 #### What is the sector size?
+
  From **TSK - fsstat** : **2048**
 
 #### What is the cluster size?
+
 From **TSK - fsstat** : **2048**
 
 #### How many FAT tables are present?
@@ -272,7 +273,6 @@ Using **dd** I then extracted the data in those sectors
 > less lastsectors.out 
 
 R0lGODlhVgAhALMLAP///wAAAP//AP/kAOu9ArZ9A9KfAYBUALOzs7F1AWwADgAAAAAAAAAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh+QQFCgALACwAAAAAVgAhAAAE/3DJSau9OOvNd/hgKI5kaZ5o+lUB4L5wLM90bd+4G1Bt7v/AIGw36QFaRuEriWMqYz2ixIh8Wq+0KG951IlkoGXUS/1AyeKo+bhmc49b3VDefY+792rdLnfWx3k6cXt/dHSBiIaHh2WIYX+DSYF8hYmEhYR6lmCRc5hpYot/baJIayGlp4JFSnc5rlhNg0Gkr36xWbO4u7hSUyrAwcImUCMdx8jJx5K+ys7P0GXQ09TJatXY2QXbBwc8K9nh0NsDAwTn4OLqzwUDAu/v5gTN6/Ua7fD58vT2/RQFAkDAAzHPn8EK7QIgUBgg4BID/A6uSwgAwRGHFgNAlHiQoo6AC0QXbuTo74A7ge8IjiRpz2S5fPEGGEgQkWW2AwTcBfxQjgBNmyXPDQigoGgAAjNrAsWGE92HmT+XljxgoGpSpVLDiagWAQAh+QQFCgALACw4ABcACQAIAAAEEnABsGpFweqAtKReKI6klVVnBAAh+QQFCgALACw4ABcACQADAAAECxCsOVFYklIZkMYRACH5BAUKAAsALDgAFwAJAAMAAAQMcC0kJQAyVL1unVIEADs=...
-
 ```
 
 Running some analysis tools on the file I discovered that it was base64 encoded
@@ -283,14 +283,15 @@ so I decoded it
 ```
 
 ![](./assets/lastsectors.jpg)
+
 #### How many files/deleted-files with extension TXT are there?
 
 ```
 > fls corrupted.dd | grep -i txt
 
-r/r 45:	HOMEWORK.TXT
-r/r 32:	NETWORKS.TXT
-r/r * 36:	_EADME.TXT
+r/r 45:    HOMEWORK.TXT
+r/r 32:    NETWORKS.TXT
+r/r * 36:    _EADME.TXT
 ```
 
 I found out that there were only three txt files and one of them,  _\_EADME.TXT_, had been deleted
@@ -302,60 +303,58 @@ Using **TSK - fls**  and **TSK - icat** I was able to read the files
 ```
 > fls corrupted.dd
 
-r/r 45:	HOMEWORK.TXT
-r/r 3:	BILL        (Volume Label Entry)
-r/r 4:	ATTRIB.EXE
-r/r 5:	AUTOEXEC.BAT
-r/r 6:	CHKDSK.EXE
-r/r 7:	COMMAND.COM
-r/r 8:	CONFIG.SYS
-r/r 9:	COUNTRY.SYS
-r/r 10:	COUNTRY.TX_
-r/r 11:	DEBUG.EXE
-r/r 12:	DEFRAG.EXE
-r/r 13:	DEFRAG.HL_
-r/r 14:	DOSSETUP.INI
-r/r 15:	DRVSPACE.BIN
-r/r 16:	EDIT.COM
-r/r 17:	EGA.CP_
-r/r 18:	EGA2.CP_
-r/r 19:	EGA3.CP_
-r/r 20:	EMM386.EX_
-r/r 21:	EXPAND.EXE
-r/r 22:	FDISK.EXE
-r/r 23:	FORMAT.COM
-r/r 24:	IO.SYS
-r/r 25:	ISO.CP_
-r/r 26:	KEYB.COM
-r/r 27:	KEYBOARD.SYS
-r/r 28:	KEYBRD2.SY_
-r/r 29:	MEM.EX_
-r/r 30:	MSCDEX.EXE
-r/r 31:	MSDOS.SYS
-r/r 32:	NETWORKS.TXT
-r/r 33:	NLSFUNC.EXE
-r/r 34:	PACKING.LST
-r/r 35:	QBASIC.EXE
-r/r * 36:	_EADME.TXT
-r/r 37:	REPLACE.EX_
-r/r 38:	RESTORE.EX_
-r/r 39:	SCANDISK.EXE
-r/r 40:	SCANDISK.INI
-r/r 41:	SETUP.EXE
-r/r 42:	SETUP.MSG
-r/r 43:	SYS.COM
-r/r 44:	XCOPY.EX_
-v/v 45827:	$MBR
-v/v 45828:	$FAT1
-V/V 45831:	$OrphanFiles
- 
+r/r 45:    HOMEWORK.TXT
+r/r 3:    BILL        (Volume Label Entry)
+r/r 4:    ATTRIB.EXE
+r/r 5:    AUTOEXEC.BAT
+r/r 6:    CHKDSK.EXE
+r/r 7:    COMMAND.COM
+r/r 8:    CONFIG.SYS
+r/r 9:    COUNTRY.SYS
+r/r 10:    COUNTRY.TX_
+r/r 11:    DEBUG.EXE
+r/r 12:    DEFRAG.EXE
+r/r 13:    DEFRAG.HL_
+r/r 14:    DOSSETUP.INI
+r/r 15:    DRVSPACE.BIN
+r/r 16:    EDIT.COM
+r/r 17:    EGA.CP_
+r/r 18:    EGA2.CP_
+r/r 19:    EGA3.CP_
+r/r 20:    EMM386.EX_
+r/r 21:    EXPAND.EXE
+r/r 22:    FDISK.EXE
+r/r 23:    FORMAT.COM
+r/r 24:    IO.SYS
+r/r 25:    ISO.CP_
+r/r 26:    KEYB.COM
+r/r 27:    KEYBOARD.SYS
+r/r 28:    KEYBRD2.SY_
+r/r 29:    MEM.EX_
+r/r 30:    MSCDEX.EXE
+r/r 31:    MSDOS.SYS
+r/r 32:    NETWORKS.TXT
+r/r 33:    NLSFUNC.EXE
+r/r 34:    PACKING.LST
+r/r 35:    QBASIC.EXE
+r/r * 36:    _EADME.TXT
+r/r 37:    REPLACE.EX_
+r/r 38:    RESTORE.EX_
+r/r 39:    SCANDISK.EXE
+r/r 40:    SCANDISK.INI
+r/r 41:    SETUP.EXE
+r/r 42:    SETUP.MSG
+r/r 43:    SYS.COM
+r/r 44:    XCOPY.EX_
+v/v 45827:    $MBR
+v/v 45828:    $FAT1
+V/V 45831:    $OrphanFiles
 ```
 
 ```
 > icat corrupted.dd 45 > homeworks.txt | less homeworks.txt
 
 zxgio
-
 ```
 
 ```
@@ -388,7 +387,6 @@ This file contains the following sections:
 15. TCS 10Net or DCA 10Net
 
 [...]
-
 ```
 
 ```
@@ -426,11 +424,10 @@ files included with MS-DOS:
   included with MS-DOS 6.22.
 
 [...]
-
-``` 
+```
 
 Readonly-mounting them I was only able to read the content of _HOMEWORKS.TXT_ so I needed to repair the FS before continuing the analysis.  
-  
+
 Following the hint provided I looked into the image for something off and since I knew from  **TSK - fsstat** that there were three FATs after the MBR I tried to extract them using **dd** and see  their content.
 
 ```
@@ -461,7 +458,6 @@ Like that I checked also their hash  looking for the one matching **e9207be4a1dd
 
 9b4a458763b06fefc65ba3d36dd0e1f8b5292e137e3db5dea9b1de67dc361311  HOMEWORK.TXT
 e9207be4a1dde2c2f3efa3aeb9942858b6aaa65e82a9d69a8e6a71357eb2d03c  NETWORKS.TXT
-
 ```
 
 And surely enough NETWORKS.TXT seemed to match my research.
@@ -720,21 +716,21 @@ Pondering that I took a look at both using **TSK - fls** and extracted found fil
 ```
 > fls -f fat fourth_partition
 
-r/r 3:	FAT32LABEL  (Volume Label Entry)
-r/r 6:	fat32_nashorn_1.jpg
-r/r 9:	fat32_nashorn_2.jpg
-r/r 12:	fat32_nashorn_3.jpg
-v/v 266105027:	$MBR
-v/v 266105028:	$FAT1
-V/V 266105029:	$OrphanFiles
+r/r 3:    FAT32LABEL  (Volume Label Entry)
+r/r 6:    fat32_nashorn_1.jpg
+r/r 9:    fat32_nashorn_2.jpg
+r/r 12:    fat32_nashorn_3.jpg
+v/v 266105027:    $MBR
+v/v 266105028:    $FAT1
+V/V 266105029:    $OrphanFiles
 
 > fls -f ext fourth_partition
 
-d/d 11:	lost+found
-r/r 24577:	ext3_nashorn_1.jpg
-r/r 24578:	ext3_nashorn_2.jpg
-r/r 24579:	ext3_nashorn_3.jpg
-V/V 524289:	$OrphanFiles
+d/d 11:    lost+found
+r/r 24577:    ext3_nashorn_1.jpg
+r/r 24578:    ext3_nashorn_2.jpg
+r/r 24579:    ext3_nashorn_3.jpg
+V/V 524289:    $OrphanFiles
 ```
 
 ```
@@ -782,5 +778,3 @@ _"The combination of Ext3 and FAT32 appears convenient because the superblock of
 
 So the EXT3 file system serves as a host for the other one.
 FAT32 data areas are marked as damaged so that the host doesn't accidentally overwrite them, making coexistence of file systems possible 
-
-
