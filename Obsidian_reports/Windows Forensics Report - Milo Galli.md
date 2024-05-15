@@ -42,9 +42,23 @@ scheduled. After the exchange, a communication message is sent
 confirming the owl purchase has been completed.
 ```
 
-The target's name is Sarah McAvoy and looking at the image with different tools it appears that her activity was condensed in a time-span from **1/27/2017** to **2/2/2017**
+The target's name is Sarah McAvoy and looking at the image with different tools it appears that her activity was condensed in a time-span from **1/27/2017** to **2/2/2017**.
 
-## 1/27/2017
+
+
+![](./assets/Windowspc_usage_logarithmic_view.png)
+
+
+
+The provided image offers an overview of the target's activity in the considered timespan where:
+
+- Red indicates File-System activity ( File Accessed, Changed, Created or Modified )
+
+- Green indicates Web-Activity ( Web Bookmarks, Web Cache, Web Cookies Created/Accessed, Web Form Autofill Created/Accessed, Web Downloads, Web History Created/Accessed, Web Searches )
+
+- Turquoise indicates other activities ( Backups, Bluetooth Connections, Calendar activities, Calls, USB Devices attached, Documents accessed, Emails sent/received, GPS activities...)
+
+## User activity [ 1/27/2017 ]
 
 The target downloaded and set up Chrome at **00:55** and  surfed the web looking at different topics all related to mythical beasts and harry potter, especially owls.
 
@@ -101,6 +115,8 @@ At **18:33** we have a major spike in our analysis since the target visited a Gm
 - **"Snowy Owl2.jpg"**
 - **"Snowy Owl3.jpg"**
 - **"Snowy Owl4.jpg"**
+  
+  
 
 ![](./assets/Owlsforsale_email_attachment.png)
 
@@ -124,7 +140,7 @@ The trader sent her some snowy owls available for purchase at the moment of cont
 
 .
 
-## 1/28/2017
+## User activity [ 1/28/2017 ]
 
 The target didn't produce any relevant data until **22:46** when she went online on **www.youtube.com** and searched for **"How to take care of owls"** looking in the following minutes at these videos:
 
@@ -139,15 +155,15 @@ During the whole browsing she accessed multiple times **www.gmail.com** using **
 
 The hyphotesis here is that she received a offer for the purchase of a snowy owl and she considered it while browising on other online shops looking for the same animal, but finally accapting the offer and deleting other possible purchases.
 
-## 1/29/2017
+## User activity [ 1/29/2017 ]
 
 There is no relevant data to be documented for this day.
 
-## 1/30/2017
+## User activity [ 1/30/2017 ]
 
 The only thing relevant for this day is that the target exchanged emails with someone at **23:50** using the account **mcavoys87@gmail.com**.
 
-## 1/31/2017
+## User activity [ 1/31/2017 ]
 
 No relevant activity was spotted until 19:08 when the target downloaded some pdf files about owl's care and accessed them:
 
@@ -166,9 +182,9 @@ And right after looked again at the pdfs recently visited and also other documen
 
 Then the target continued surfing the web especially watching videos in youtube until **20:16** when she moved some file to recycle bin without emptying it and started using the **Skype** application.
 
-During  the usage  she chatted with some friends about topics that didn't involve owls./org/freedesktop/UPower/devices/DisplayDevice
+During  the usage  she chatted with some friends about topics that didn't involve owls.
 
-## 2 / 1 / 2017
+## User activity [ 2 / 1 / 2017 ]
 
 There is no relevant activity until **17:59** when the target downloaded, set up and accessed **Pidgin**, which is a multi-platform app for instant messaging, looking also at  the *about* page and the software's manual in the following minutes
 
@@ -178,9 +194,9 @@ After that at **18:23** she used **Google Hangouts** to chat with someone.
 
 The hypothesis is that she downloaded the Pidgin app in order to chat with the bird trader she had previously contatcted via Gmail
 
-## 2/ 2 / 2017
+## User activity [ 2/ 2 / 2017 ]
 
-The target executed for the last time Pidgin at 21:2
+The target executed for the last time Pidgin at 21:20
 
 Nothing relevant happens until **22:00** when the target accesses a file named **"My New Pet.jpg"** contained in the folder **"New Pet Care"**.
 
@@ -188,11 +204,7 @@ Right after at **22:25** she ran **Pidgin** and at  **22:29**  she composed a em
 
 Then at **22:38** she accessed again the file **"My New Pet.jpg"** along with two other pdf files named **"Snowy Owl Care.pdf"** and **"Snowy Owl.pdf"** that she previously downloaded and moved them in them in the folder **New Pet Care**.
 
-At **22:53** she accessed a new volume, **:F**, a USB drive with **80BC89A2** as serial number where she moved these files:
-
-- **My New Pet.jpg**
-- **Snowy Owl Care.pdf**
-- **Snowy Owl.pdf**
+At **22:53** she accessed 
 
 From these informations we might infer that the target actually purchased a Snowy Owl and was now gathering informations to take care for it.
 
@@ -200,4 +212,8 @@ Our suspects get actually more concrete when at **22:39** the target accesses a 
 
 At **22:57** she composed numerous emails on Gmail and in the following hours she went  back and forward between Youtube, Facebook, Yahoo-Messanger, Tumblr  and Gmail as she was waiting for a response from someone
 
-At **23:38** she attached a USB device and at right after looked at the **Snowy Owl Care.pdf** file
+At **23:38** she attached a USB device, looked at a pdf file named **Snowy Owl Care.pdf** and moved these files into the usb:
+
+- **My New Pet.jpg**
+- **Snowy Owl Care.pdf**
+- **Snowy Owl.pdf**
