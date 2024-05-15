@@ -138,7 +138,9 @@ At **18:33** we have a major spike in our analysis since the target visited a Gm
 
 Considering that we can assume that the target came in touch with someone met online after visiting the previously cited websites and contacted him/her via email in order to purchase an owl.
 
-The trader sent her some snowy owls available for purchase at the moment of contact
+The trader sent her some snowy owls available for purchase
+
+ at the moment of contact
 
 .
 
@@ -184,7 +186,9 @@ After that there nothing relevant happened until **20:21** when during a youtube
 
 And right after looked again at the pdfs recently visited and also other documents regarding snowy owls' care like a xls file named **"Bibliography - Snowy Owl 14 April 2014- GLOW posting.xls"**.
 
-Then the target continued surfing the web especially watching videos in youtube until **20:16** when she moved some file to recycle bin without emptying it and started using the **Skype** application.
+
+
+Then, after accessing a file nemed **"Next Pet"** located in the Desktop,  the target continued surfing the web especially watching videos in youtube until **20:16** when she moved some file to recycle bin without emptying it and started using the **Skype** application.
 
 During  the usage  she chatted with some friends about topics that didn't involve owls.
 
