@@ -27,9 +27,11 @@ The complete timeline can be found in the "Timeline" folder along with a set of 
 
 # Device usage analysis
 
-💿 [Link to the analysed image](https://digitalcorpora.s3.amazonaws.com/corpora/scenarios/2019-owl/HD1.zip)
+## Evidence
 
-### Scenario
+💿 [Image file download](https://digitalcorpora.s3.amazonaws.com/corpora/scenarios/2019-owl/HD1.zip)
+
+## Scenario
 
 ```
 In a jurisdiction where Owls are illegal to trade and buy,
