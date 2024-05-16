@@ -46,11 +46,7 @@ confirming the owl purchase has been completed.
 
 The target's name is Sarah McAvoy and looking at the image with different tools it appears that her activity was condensed in a time-span from **1/27/2017** to **2/2/2017**.
 
-
-
 ![](./assets/Windowspc_usage_logarithmic_view.png)
-
-
 
 The provided image offers an overview of the target's activity in the considered timespan where:
 
@@ -70,7 +66,7 @@ At **01:06** she downloaded three jpg files:
 - **"Pigmy Owl.jpg"**
 - **Great Horned Owl.jpg"**
 
-At  **01:16** she then downloaded and opened a pdf file called **"Great Horned Owl Info.pdf"** and half an hour later she installed also the **Skype** application and atteched a usb external webcam but didn't make any calls.
+At  **01:16** she then downloaded and opened a pdf file called **"Great Horned Owl Info.pdf"** and half an hour later she installed also the ** Skype** application and atteched a usb external webcam but didn't make any calls.
 
 At **2:06** the target opened a file named **Luna-Owl.jpg** and some minutes later she searched on **www.amazon.com** and  **www.21food.com** looking respectevly for **"owl eggs"** and **"Fertile Snowy Owl eggs for sale**.
 
@@ -117,8 +113,6 @@ At **18:33** we have a major spike in our analysis since the target visited a Gm
 - **"Snowy Owl2.jpg"**
 - **"Snowy Owl3.jpg"**
 - **"Snowy Owl4.jpg"**
-  
-  
 
 ![](./assets/Owlsforsale_email_attachment.png)
 
@@ -181,8 +175,6 @@ After that there nothing relevant happened until **20:21** when during a youtube
 - **Snowy Owls' wingspan**
 
 And right after looked again at the pdfs recently visited and also other documents regarding snowy owls' care like a xls file named **"Bibliography - Snowy Owl 14 April 2014- GLOW posting.xls"**.
-
-
 
 Then, after accessing a file nemed **"Next Pet"** located in the Desktop,  the target continued surfing the web especially watching videos in youtube until **20:16** when she moved some file to recycle bin without emptying it and started using the **Skype** application.
 
