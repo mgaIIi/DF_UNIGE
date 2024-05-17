@@ -23,7 +23,7 @@ The spreadsheet must contain, at least, the following elements:
 
 # Timeline creation
 
-The complete timeline can be found in the "Timeline" folder along with a set of sub-timelines each one considering every voice of the ones requested.
+The complete timeline can be found in the "Timeline" folder under the name **"Complete_Timeline.csv"** along with a paginated version called **"Complete_Timeline_Divided.xlsx"** where each requested analysis field has been sorted in a different page to get a more organic view.
 
 # Device usage analysis
 
@@ -66,13 +66,11 @@ At **01:06** she downloaded three jpg files:
 - **"Pigmy Owl.jpg"**
 - **Great Horned Owl.jpg"**
 
-At  **01:16** she then downloaded and opened a pdf file called **"Great Horned Owl Info.pdf"** and half an hour later she installed also the ** Skype** application and atteched a usb external webcam but didn't make any calls.
+At  **01:16** she then downloaded and opened a pdf file called **"Great Horned Owl Info.pdf"** and half an hour later she installed also the **Skype** application and atteched a usb external webcam but didn't make any calls.
 
 At **2:06** the target opened a file named **Luna-Owl.jpg** and some minutes later she searched on **www.amazon.com** and  **www.21food.com** looking respectevly for **"owl eggs"** and **"Fertile Snowy Owl eggs for sale**.
 
-At **2:47** the target downloaded Skype and set it up but didn't use the app to make any call.
-
-The activity restarts at **17:23** with the visualization of three jpg files previously downloaded in a Desktop's folder named **"pets"** :
+The target's activity restarts at **17:23** with the visualization of three jpg files previously downloaded in a Desktop's folder named **"pets"** :
 
 - **Snowy Owl.jpg**
 
@@ -132,7 +130,7 @@ At **18:33** we have a major spike in our analysis since the target visited a Gm
 
 Considering that we can assume that the target came in touch with someone met online after visiting the previously cited websites and contacted him/her via email in order to purchase an owl.
 
-The trader sent her some snowy owls available for purchase at the moment of contact.
+The trader sent her some photos of snowy owls available for purchase at the moment of contact.
 
 ## User activity [ 1/28/2017 ]
 
@@ -143,11 +141,11 @@ The target didn't produce any relevant data until **22:46** when she went online
 
 After that in a time span that goes from **23:28** to **23:23** logged-in on Yahoo-messanger, **www.tumblr.com** where she looked at different content regarding owls ( e.g. **https://itsdrhoo.tumblr.com**) and visited also **www.amazon.com**.
 
-Then at **23:40** she visited **www.etsy.com** searched for different items with the keyword "owl". 
+Then at **23:40** she visited **www.etsy.com** searched for different items with the keyword **"owl"**. 
 
 During the whole browsing she accessed multiple times **www.gmail.com** using **mcavoys87@gmail.com** as login account.
 
-The hyphotesis here is that she received a offer for the purchase of a snowy owl and she considered it while browising on other online shops looking for the same animal, but finally accapting the offer and deleting other possible purchases.
+The hyphotesis here is that she received a offer for the purchase of a snowy owl and she considered it while browising on other online shops looking for the same animal, but finally accapting the offer and deleting other possible purchases' images.
 
 ## User activity [ 1/29/2017 ]
 
@@ -176,15 +174,17 @@ After that there nothing relevant happened until **20:21** when during a youtube
 
 And right after looked again at the pdfs recently visited and also other documents regarding snowy owls' care like a xls file named **"Bibliography - Snowy Owl 14 April 2014- GLOW posting.xls"**.
 
-Then, after accessing a file nemed **"Next Pet"** located in the Desktop,  the target continued surfing the web especially watching videos in youtube until **20:16** when she moved some file to recycle bin without emptying it and started using the **Skype** application.
+Then, after accessing a file named **"Next Pet"** located in the Desktop,  the target continued surfing the web especially watching videos on youtube until **20:16** when she moved some file to recycle bin without emptying it and started using the **Skype** application.
 
 During  the usage  she chatted with some friends about topics that didn't involve owls.
 
 ## User activity [ 2 / 1 / 2017 ]
 
-There is no relevant activity until **17:59** when the target downloaded, set up and accessed **Pidgin**, which is a multi-platform app for instant messaging, looking also at  the *about* page and the software's manual in the following minutes
+The target's activity starts at **17:59** with the download of  **Pidgin**, which is a multi-platform app for instant messaging. 
 
-Looking at the **C:/Users/Sarah\ M/AppData/Roaming/.purple** configuration folder we can say that she tried to register a Gmail and a Facebook account using for both the email address **"mcavoys87@gmail.com"** around **18:00**.
+She set up and accessed the app  while looking also at  the *about* page and the software's manual in the following minutes
+
+Looking at the **C:/Users/Sarah\ M/AppData/Roaming/.purple**, which is the folder where pidgin data is stored, we can say that she tried to register a Gmail and a Facebook account using for both the email address **"mcavoys87@gmail.com"** around **18:00**.
 
 After that at **18:23** she used **Google Hangouts** to chat with someone.
 
@@ -202,7 +202,7 @@ At **22:53** she accessed
 
 From these informations we might infer that the target actually purchased a Snowy Owl and was now gathering informations to take care for it.
 
-Our suspects get actually more concrete when at **22:39** the target accesses a url page on Google Chrome serving a html document named **thankyou.html**.
+Our suspects get actually more concrete when at **22:39** the target accesses a url page, clicking on url located in the Gmail inbox, serving a html document named **thankyou.html**.
 
 At **22:57** she composed numerous emails on Gmail and in the following hours she went  back and forward between Youtube, Facebook, Yahoo-Messanger, Tumblr  and Gmail as she was waiting for a response from someone
 
