@@ -32,10 +32,21 @@ The given pcap file displayed normal network activity of different actors but am
 At **10:27:33** the attacker sent an email to a Potenzio employee disguising himself for a society called **harmonic.com**  with some *"exclusive offers"* just for him as we can read in the message body:
 
 ```
-Dear Claudio,
-Please find attached exclusive offers for you. 
-Cheers 
-Jean Bauer
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  </head>
+  <body>
+    <p>Dear Claudio,</p>
+    <p>Please find attached <b>exclusive offers</b> for you.</p>
+    <p>Cheers</p>
+    <p>Jan Bauer<br>
+    </p>
+  </body>
+</html>
 ```
 
 Taking a general look to the pcap file with Network Miner we can see some infos about the message itself
