@@ -29,7 +29,7 @@ The given pcap file displayed normal network activity of different actors but am
 
 ## What happened?
 
-The attacker sent an email to a Potenzio employee disguising himself for a society called **harmonic.com**  with some *"exclusive offers"* just for him as we can read in the message body:
+At **10:27:33** the attacker sent an email to a Potenzio employee disguising himself for a society called **harmonic.com**  with some *"exclusive offers"* just for him as we can read in the message body:
 
 ```
 Dear Claudio,
