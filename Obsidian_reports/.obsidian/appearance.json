@@ -2,7 +2,7 @@
   "accentColor": "#e294ff",
   "cssTheme": "Catppuccin",
   "textFontFamily": "Inter",
-  "monospaceFontFamily": "Inter",
+  "monospaceFontFamily": "Iosevka Nerd Font",
   "interfaceFontFamily": "Inter",
   "theme": "obsidian"
 }

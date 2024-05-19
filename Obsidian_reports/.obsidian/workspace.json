@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Windows Forensics Report - Milo Galli.md",
+                "file": "Network Forensics Report - Milo Galli.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 341,
+    "collapsed": true
   },
   "right": {
     "id": "aaae98ad6bcc5d33",
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Windows Forensics Report - Milo Galli.md",
+                "file": "Network Forensics Report - Milo Galli.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Windows Forensics Report - Milo Galli.md",
+                "file": "Network Forensics Report - Milo Galli.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Windows Forensics Report - Milo Galli.md"
+                "file": "Network Forensics Report - Milo Galli.md"
               }
             }
           }
@@ -148,13 +149,14 @@
   },
   "active": "c7ffdacea0b56f79",
   "lastOpenFiles": [
+    "assets/Network_assignment_NetworkMiner.png",
+    "Windows Forensics Report - Milo Galli.md",
     "assets/Owlsforsale_email_attachment4.png",
     "assets/Owlsforsale_email_attachment3.png",
     "assets/Owlsforsale_email_attachment2.png",
     "assets/Owlsforsale_email_attachment.png",
     "Network Forensics Report - Milo Galli.md",
     "File-System Forensics Report - Milo Galli.md",
-    "Windows Forensics Report - Milo Galli.md",
     "- Milo Galli.md",
     "Network Forensics Report",
     "Windows Forensics - Milo Galli.md",
@@ -166,7 +168,6 @@
     "assets/jpg2_ext.jpg",
     "assets/jpg1_ext.jpg",
     "assets/zxgio_0x200.png",
-    "assets/corrupteddd_FAT0.gif",
     "assets/lastsectors",
     "Digital Forensics/File-System Report - Milo Galli.md",
     "Digital Forensics/assets",
