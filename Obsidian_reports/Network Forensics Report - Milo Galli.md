@@ -55,8 +55,18 @@ Taking a general look to the pcap file with Network Miner we can see some infos 
 
 Taking a closer look it's possible to see that the mail was sent from a pretty suspicious address ( **smtp.harmonic.com (mx.lockermaster.lol \[58.16.123.111]**) and contained an attchment called **offers.odt**.
 
+[./assets/harmonic_email_attachment]
 
+Although the file attachement seemed to be clean the messages where exchanged using pop3 communication protocol and analysing the packets with a tool like wireshark we can see Claudio's credentials, just like the attacker.
 
+![](./assets/Network_Assingment_pop_credentials_leaking.png)
+
+We can see that the credentials used where:
+
+```
+User: claudio.volume
+Password: claudione
+```
 
 
 
