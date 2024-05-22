@@ -23,13 +23,38 @@ Both of the above addresses can be considered trusted.
 Please ignore Layer 2 information.
 ```
 
-## Who?
+## 1. Who?
 
-The given pcap file displayed normal network activity of different actors but among them there is an attacker, **libre0ffice.com**, acting under the IP address **58.16.123.111** and attacking **potenzio.com**.
+The given pcap file displayed normal network activity of different actors among which we can find :
+- **libre0ffice.com**, the attacker, acting under the IP address **58.16.123.111**.
+- **potenzio's net**, the attacked, using the masquerade address **203.0.113.2**
+- **potenzio's provider**, using the DNS address **203.0.113.113**
+## 2. What happened?
 
-## What happened?
+An attacker managed to access potenzio's servers and left a menacing message on their website's index page using the template utilities of the admin dashboard.
 
-#### 10:27:33
+## 3. Where did it take places?
+
+The attacker used the credentials of a potenzio's employee to access the servers and the database of the company that let him modify the credentials of an admin account. Using the new credentials he then logged into the admin dashboard a finalized the attack.
+
+## 4. When did it take place?
+
+- **2024-05-12 10:27:33 UTC**
+	The attacker sent a email to claudio.volume@potenzio.com spoofing his credentials while doing so
+	
+- **2024-05-12 10:28:23 UTC** 
+	The attacker accessed the potenzio's backend server using the credentials previously acquired installing then mysql-client to modify an admin account with a password of its choice.
+	
+- **2024-05-12 10:28:52 UTC** 
+	The attacker logged into the administration dashboard with the account previously modified and downloaded some templates for the website's index page. 
+	Using those templates he forged a new one that could be used as a reverse shell.
+	After doing so the attacker performed the real attack appending to index page a menacing message using the exploit he created.
+
+## How did it happen?
+portscanning from libreoffice and tried to access the admin section with default credentials around 10:26:20
+
+### Sending the email
+#### 2024-05-12  10:27:33 UTC
 The attacker sent an email to a Potenzio employee disguising himself for a society called **harmonic.com**  with some *"exclusive offers"* just for him as we can read in the message body:
 
 ```
@@ -50,14 +75,14 @@ Content-Transfer-Encoding: 7bit
 </html>
 ```
 
-Opening the pcap file with Network Miner we can see some informations about the message itself that was sent.
+Opening the pcap file with Network Miner we can see some informations about the message itself
 
 ![](./assets/Network_Assignment_NetworkMiner.png)
 
 Taking a closer look it's possible to see that the mail was sent from a pretty suspicious address ( **smtp.harmonic.com (mx.lockermaster.lol \[58.16.123.111]**) and contained an attachment called [offers.odt](./assets/harmonic_email_attachment).
 Notice that the ip address found in the server is the same as the attacker's one.
 
-Although the attached file seemed to be clean the messages where exchanged using POP3 communication protocol and analysing the packets with a tool like Wireshark we can see Claudio's credentials.
+Although the attached file seemed to be clean the messages where exchanged using POP3 communication protocol and analysing the packets with a tool like Wireshark  Claudio's credentials could be spoofed easily.
 
 ![](./assets/Network_Assingment_pop_credentials_leaking.png)
 
@@ -68,15 +93,17 @@ User: claudio.volume
 Password: claudione
 ```
 
-#### 10:28:23 
+### Accessing the backend server
+#### 2024-05-12 10:28:23 UTC
 
-Using these credentials the attacker invoked a shell on the server, installed mysql-client and accessed the joomla database changing the password for the admin account to one of his choice:
+Using these credentials the attacker invoked a shell on the server, installed mysql-client and accessed the Joomla database changing the password for the admin account to one of his choice:
 
 ```
 claudio.volume@client:/$ mysql -u joomla --password=secret4joomla -h 10.0.100.100 joomladb -e "Update pnv1x_users SET password = 'd2064d358136996bd22421584a7cb33e:trd7TvKHx6dMeoMmBVxYmg0vuXEA4199' WHERE name='admin';"
 ```
 
-#### 10:28:52
+### Modifying the index page
+#### 2024-05-12 10:28:52 UTC
 
 Using the newly forged admin credentials the attacker logged into the System Dashboard and  accessed the template page  for the *"Joomla Cassiopea Page"*.
 
@@ -84,6 +111,7 @@ After that he forged a new template where the value of a parameter called *rando
 If the value of the random parameter is some valid command once decoded from base64 is then executed on the server using the *system* command.
 
 ```
+[ content of the index page ]
 .
 .
 .
@@ -148,7 +176,7 @@ Web page output:
     </html>\n
 ```
 
-After that the attacker proceed to send with another final payload:
+After that the attacker proceed to send another request with the final payload performing the attack itself:
 
 Attacker's forged url:
 

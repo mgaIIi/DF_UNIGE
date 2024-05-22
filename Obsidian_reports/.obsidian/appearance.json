@@ -1,8 +1,9 @@
 {
-  "accentColor": "#e294ff",
+  "accentColor": "#e7fea9",
   "cssTheme": "Catppuccin",
   "textFontFamily": "Inter",
   "monospaceFontFamily": "Iosevka Nerd Font",
   "interfaceFontFamily": "Inter",
-  "theme": "obsidian"
+  "theme": "obsidian",
+  "baseFontSize": 18
 }

@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "3769a68ce49027ce",
+        "id": "819008daf9c0e660",
         "type": "tabs",
         "children": [
           {
-            "id": "c7ffdacea0b56f79",
+            "id": "15eba04eadc53338",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -147,8 +147,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c7ffdacea0b56f79",
+  "active": "7c1f0b818abfe434",
   "lastOpenFiles": [
+    "Network Forensics Report - Milo Galli.md",
     "assets/harmonic_email_attachment",
     "assets/Network_Assingment_pop_credentials_leaking.png",
     "assets/Network_assignment_NetworkMiner.png",
@@ -157,7 +158,6 @@
     "assets/Owlsforsale_email_attachment3.png",
     "assets/Owlsforsale_email_attachment2.png",
     "assets/Owlsforsale_email_attachment.png",
-    "Network Forensics Report - Milo Galli.md",
     "File-System Forensics Report - Milo Galli.md",
     "- Milo Galli.md",
     "Network Forensics Report",
