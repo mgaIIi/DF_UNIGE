@@ -50,8 +50,17 @@ The attacker used the credentials of a potenzio's employee to access the servers
 	Using those templates he forged a new one that could be used as a reverse shell.
 	After doing so the attacker performed the real attack appending to index page a menacing message using the exploit he created.
 
+## 5. Why did it happen?
+
+The attack was carried out by a group of eco-cyber-activists known as EcoDefenders, aiming to threaten Potenzio's company by disrupting access to their website.
+In the message left on the index page, the activists claimed responsibility, citing the company's prolonged pollution and illegal toxic waste production as their motivation.
+They described the attack as a warning and promised more severe actions if the company does not adopt environmentally friendly policies.
+
 ## How did it happen?
-portscanning from libreoffice and tried to access the admin section with default credentials around 10:26:20
+
+### Information gathering
+#### 2024-05-12 10:26:19 UTC
+The attacker started a port-scanning session and tried also to access the admin page with default credentials but didn't succeed in doing so.
 
 ### Sending the email
 #### 2024-05-12  10:27:33 UTC
@@ -67,7 +76,7 @@ Content-Transfer-Encoding: 7bit
   </head>
   <body>
     <p>Dear Claudio,</p>
-    <p>Please find attached <b>exclusive offers</b> for you.</p>
+    <p>Please find attached <b>exclusive offerBoth of the above addresses can be considered trusted. Please ignore Layer 2 is</b> for you.</p>
     <p>Cheers</p>
     <p>Jan Bauer<br>
     </p>
@@ -93,6 +102,7 @@ User: claudio.volume
 Password: claudione
 ```
 
+
 ### Accessing the backend server
 #### 2024-05-12 10:28:23 UTC
 
@@ -102,10 +112,9 @@ Using these credentials the attacker invoked a shell on the server, installed my
 claudio.volume@client:/$ mysql -u joomla --password=secret4joomla -h 10.0.100.100 joomladb -e "Update pnv1x_users SET password = 'd2064d358136996bd22421584a7cb33e:trd7TvKHx6dMeoMmBVxYmg0vuXEA4199' WHERE name='admin';"
 ```
 
+
 ### Modifying the index page
 #### 2024-05-12 10:28:52 UTC
-
-Using the newly forged admin credentials the attacker logged into the System Dashboard and  accessed the template page  for the *"Joomla Cassiopea Page"*.
 
 After that he forged a new template where the value of a parameter called *random*, that could be pretty much anything, can be sent in a GET request to the index.php page.
 If the value of the random parameter is some valid command once decoded from base64 is then executed on the server using the *system* command.
@@ -176,7 +185,7 @@ Web page output:
     </html>\n
 ```
 
-After that the attacker proceed to send another request with the final payload performing the attack itself:
+After that the attacker proceeded to send another request with the final payload performing the attack itself that overwrote the index page of the Potenzio's website
 
 Attacker's forged url:
 
