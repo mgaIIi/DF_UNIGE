@@ -70,7 +70,7 @@ Knowing this the attacker sent another request to **"www.potenzio.com/api/index.
 ...
 {
 	"type": "application",
-    "id": "224",
+	"id": "224",
     "attributes": {
 	    "dbtype": "mysqli",
 	    "id": 224
@@ -107,6 +107,14 @@ Knowing this the attacker sent another request to **"www.potenzio.com/api/index.
 	    "password": "secret4joomla",
 	    "id": 224
     }
+},
+{
+	"type": "application",
+	"id": "224",
+	"attributes": {
+	    "dbprefix": "pnv1x_",
+		"id": 224
+	}
 },
 ...
 ```
