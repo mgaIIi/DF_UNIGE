@@ -123,7 +123,7 @@ He then tried to use the password to access the admin page but that didn't work
 
 ### Sending the email
 #### 2024-05-12  10:27:33 UTC
-The attacker sent an email to a Potenzio employee disguising himself for a society called **harmonic.com**  with some *"exclusive offers"* just for him as we can read in the message body:
+The attacker sent an email to Potenzio disguising himself for a society called **harmonic.com**  with some *"exclusive offers"* just for him as we can read in the message body:
 
 ```html
 <html>
