@@ -31,24 +31,26 @@ The given pcap file displayed normal network activity of different actors among 
 - **potenzio's provider**, using the DNS address **203.0.113.113**
 ## 2. What happened?
 
-An attacker managed to access potenzio's servers and left a menacing message on their website's index page using the template utilities of the admin dashboard.
-
+An attacker managed to modify Potenzio's website leaving a menacing message that  threatened the company.
 ## 3. Where did it take places?
 
-The attacker used the credentials of a potenzio's employee to access the servers and the database of the company that let him modify the credentials of an admin account. Using the new credentials he then logged into the admin dashboard a finalized the attack.
+The attacker used the credentials of a Potenzio's employee to access the servers and the database of the company that let him modify the credentials of an admin account. Using the new credentials he then logged into the admin dashboard a finalized the attack modifying the index page of the company's website.
 
 ## 4. When did it take place?
 
+- **2024-05-12 10:26:19 UTC**
+	The attacker did a port-scanning session and tried to access the administrator page of Potenzio's website without success, but found the complete database configuration through a public json file.
+	
 - **2024-05-12 10:27:33 UTC**
-	The attacker sent a email to claudio.volume@potenzio.com spoofing his credentials while doing so
+	The attacker sent a email to claudio.volume@potenzio.com spoofing his  credentials while doing so.
 	
 - **2024-05-12 10:28:23 UTC** 
-	The attacker accessed the potenzio's backend server using the credentials previously acquired installing then mysql-client to modify an admin account with a password of its choice.
+	The attacker accessed the Potenzio's backend server using the credentials  previously acquired and installing then mysql-client to modify an admin account's credentials with a password of his choice.
 	
 - **2024-05-12 10:28:52 UTC** 
-	The attacker logged into the administration dashboard with the account previously modified and downloaded some templates for the website's index page. 
+	The attacker logged into the administration dashboard with the modified admin account and downloaded some templates for the website's index page. 
 	Using those templates he forged a new one that could be used as a reverse shell.
-	After doing so the attacker performed the real attack appending to index page a menacing message using the exploit he created.
+	After doing so the attacker tested the exploit and then performed the real attack substituting the index page with menacing message threatening the company.
 
 ## 5. Why did it happen?
 
@@ -172,8 +174,8 @@ claudio.volume@client:/$ mysql -u joomla --password=secret4joomla -h 10.0.100.10
 ### Modifying the index page
 #### 2024-05-12 10:28:52 UTC
 
-After that he forged a new template where the value of a parameter called *random*, that could be pretty much anything, can be sent in a GET request to the index.php page.
-If the value of the random parameter is some valid command once decoded from base64 is then executed on the server using the *system* command.
+The attacker downloaded some index page templates and from them he forged a new one where the value of a parameter called *random* can be sent in a GET request to the index page.
+If the value of the random parameter is some valid command, once decoded from base 64, is executed on the server using the *system* command.
 
 ```php
 [ content of the index page ]
@@ -189,7 +191,7 @@ If the value of the random parameter is some valid command once decoded from bas
 
 *relevant fragment of the attacker's template*
 
-Doing so the attacker has access to a reverse shell on the potenzio's server.
+Doing so the attacker had access to a reverse shell on Potenzio's server.
 The attacker then tested the newly created template sending a request where the *random* parameter's value was decoded into the  **ls -la** command, exposing the files present on the server
 
 Attacker's forged url :
@@ -270,3 +272,8 @@ Act now. Our planet cannot wait any longer.
 
 EOF"
 ```
+
+## Timeline Summary
+
+![](./assets/Network_Forensics_Timeline.png)
+
