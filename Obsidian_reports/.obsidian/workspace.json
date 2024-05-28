@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 341
+    "width": 341,
+    "collapsed": true
   },
   "right": {
     "id": "aaae98ad6bcc5d33",
@@ -146,7 +147,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "15eba04eadc53338",
+  "active": "7c1f0b818abfe434",
   "lastOpenFiles": [
     "assets/Network_Forensics_Timeline.png",
     "Network Forensics Report - Milo Galli.md",

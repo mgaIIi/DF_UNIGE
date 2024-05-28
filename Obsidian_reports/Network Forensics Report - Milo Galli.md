@@ -31,11 +31,13 @@ The given pcap file displayed normal network activity of different actors among 
 - **potenzio's provider**, using the DNS address **203.0.113.113**
 ## 2. What happened?
 
-An attacker managed to modify Potenzio's website leaving a menacing message that  threatened the company.
+An attacker altered Potenzio's website index page, leaving a menacing message that threatened the company unless it revised its environmental policies.
+The captured traffic consisted primarily of simple HTTP queries. However, some messages between the attacker and the target used the POP3 protocol, allowing the attacker to spoof the credentials of a Potenzio employee.
 ## 3. Where did it take places?
 
-The attacker used the credentials of a Potenzio's employee to access the servers and the database of the company that let him modify the credentials of an admin account. Using the new credentials he then logged into the admin dashboard a finalized the attack modifying the index page of the company's website.
-
+The attack's core location can be identified with Potenzio's backend and database.
+The attackers were able to access the server with a remote shell and install a cli-tool that allowed them to interact directly with the DB and modify admin accounts data.
+After doing so they just had to send some requests to admin-panel in order to finalize the attack.
 ## 4. When did it take place?
 
 - **2024-05-12 10:26:19 UTC**
