@@ -164,7 +164,7 @@ Password: claudione
 
 
 ### Accessing the backend server
-#### 2024-05-12 10:28:23 UTC
+#### 2024-05-12 10:28:05 UTC
 
 Using these credentials the attacker invoked a shell on the server, installed mysql-client and accessed the Joomla database changing the password for the admin account to one of his choice:
 
