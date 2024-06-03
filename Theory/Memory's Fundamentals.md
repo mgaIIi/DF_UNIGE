@@ -110,7 +110,7 @@ the raw data in case a given key protector is compromised or changed
 
 *The Trusted Platform Module is mostly used on notebooks* and it stores a *Storage Root Key* that is used to decrypt the *Volume Master Key* only if the system passes the *Secure Boot Check*
 
-![[./assets/Bitlocker.png]]
+![](./assets/Bitlocker.png)
 
 ==\ \ \ Bitlocker does not protect from other users on the computer\ \ \ \ ==
 
