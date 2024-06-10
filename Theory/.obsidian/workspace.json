@@ -42,9 +42,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "00350b8bd611b260",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "NTFS.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -110,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "FAT.md",
+                "file": "NTFS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "FAT.md",
+                "file": "NTFS.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +162,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "FAT.md"
+                "file": "NTFS.md"
               }
             }
           }
@@ -171,10 +183,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "756580fb3cc613d0",
+  "active": "00350b8bd611b260",
   "lastOpenFiles": [
-    "EXT.md",
     "FAT.md",
+    "NTFS.md",
+    "EXT.md",
     "Memory's Fundamentals.md",
     "assets/Bitlocker.png"
   ]
