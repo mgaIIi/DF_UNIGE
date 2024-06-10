@@ -114,3 +114,6 @@ the raw data in case a given key protector is compromised or changed
 
 ==\ \ \ Bitlocker does not protect from other users on the computer\ \ \ \ ==
 
+To break Bitlocker's password :
+- Perform a *dump file attack*/*hibernation page file attack* : this attack is universal and works regardless of the type of protector. It dumps the computer's volatile memory where the Volume Mater Key is loaded unencrypted while the volume is mounted.
+- Use *Bitlocker recovery keys* : in many situations recovery keys are stored in the user's Microsoft Account so extracting them from there allows instant mounting or decrypting.

@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "d2b97244cd8c72fe",
+        "id": "ff24127df91489c6",
         "type": "tabs",
         "children": [
           {
-            "id": "7fb6215714976084",
+            "id": "b5febb763c7c3f87",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -18,8 +18,33 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "331c45bfbefcbb11",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "EXT.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "756580fb3cc613d0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "FAT.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -85,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Memory's Fundamentals.md",
+                "file": "FAT.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Memory's Fundamentals.md",
+                "file": "FAT.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Memory's Fundamentals.md"
+                "file": "FAT.md"
               }
             }
           }
@@ -146,6 +171,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "7fb6215714976084",
-  "lastOpenFiles": []
+  "active": "756580fb3cc613d0",
+  "lastOpenFiles": [
+    "EXT.md",
+    "FAT.md",
+    "Memory's Fundamentals.md",
+    "assets/Bitlocker.png"
+  ]
 }
