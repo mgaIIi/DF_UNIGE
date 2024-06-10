@@ -1,3 +1,4 @@
+## Outline
 Based on traditional UNIX FS but with modern features like:
 - extended-attributes
 - journaling
@@ -9,7 +10,7 @@ Designed to be *extensible* via optional features:
 - *incompatible features* : if not supported the FS should not be mounted
 - *read only compatible features* : if not supported the OS can still read only mount the FS 
 
-## EXT4
+## ext4
 Principle features : 
 - *Supports very large volumes* with a max files size from 2TB to 16TB
 - *Backward compatible* with the ability to mount ext3 file-systems
