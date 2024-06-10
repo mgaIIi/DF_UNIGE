@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "EXT.md",
+                "file": "FAT.md",
                 "mode": "source",
                 "source": false
               }
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "EXT.md",
+                "file": "FAT.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "EXT.md",
+                "file": "FAT.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "EXT.md"
+                "file": "FAT.md"
               }
             }
           }
@@ -173,8 +173,8 @@
   },
   "active": "756580fb3cc613d0",
   "lastOpenFiles": [
-    "FAT.md",
     "EXT.md",
+    "FAT.md",
     "Memory's Fundamentals.md",
     "assets/Bitlocker.png"
   ]
