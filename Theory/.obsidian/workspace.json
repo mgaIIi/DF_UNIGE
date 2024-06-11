@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "dedc3a4f116dd918",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Volume and File System Analysis.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "NTFS.md",
+                "file": "Volume and File System Analysis.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "NTFS.md",
+                "file": "Volume and File System Analysis.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "NTFS.md"
+                "file": "Volume and File System Analysis.md"
               }
             }
           }
@@ -146,10 +159,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "59f80c855521f382",
+  "active": "dedc3a4f116dd918",
   "lastOpenFiles": [
-    "NTFS.md~",
     "NTFS.md",
+    "Volume and File System Analysis.md",
+    "NTFS.md~",
     "Memory's Fundamentals.md",
     "EXT.md",
     "FAT.md",
