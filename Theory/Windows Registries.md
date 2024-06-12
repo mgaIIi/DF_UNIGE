@@ -81,3 +81,46 @@ Two subfolder:
 - CustomDestinations
 Creation Time -> first time of app execution
 Modified Time -> last time of app execution
+
+## Shellbags
+Are used to store user preferences for folder display in windows explorer
+**Useful to determine which folders were accessed on the local host, on a network share or on a removable device**
+For some folders is also possible to determine when they were accessed and can contain evidence of previously existing folders
+
+Stored in user's registry files:
+**Explorer Access**
+- USRCLASS.DAT \\Local Settings\\Software\\Microsoft\\Windows\\Shell\\Bags
+- USRCLASS.DAT \\Local Settings\\Software\\Microsoft\\Windows\\Shell\\BagMRU
+**Desktop Access**
+- NTUSER.DAT \\Software\\Microsoft\\Windows\\Shell\\BagMRU
+- NTUSER.DAT \\Software\\Microsoft\\Windows\\Shell\\Bags
+
+## USB Device Analysis
+Is possible to achieve a lot of informations via **shell items** and **SYSTEM / SOFTWARE / NTUSER.DAT Registries** :
+- SYSTEM \\Current COntrol Set\\ENUM\\USB
+- SYSTEM \\Current Control Set\\ENUM\\USBSTOR
+Possible informations that can be obtained are:
+- Installation date and first connection
+- Last connection
+- Last Removal
+- Volume Serial Number
+
+## Prefetch
+Are used to increase system performances by preloading libraries/code.
+Stored in .pf files in **C:\\Windows\\Prefetch** and there is one file per executable.
+
+## Internet Browsers
+Is possible to recover:
+- Cache files
+- History
+- Cookies
+- Filled forms
+- Last Session
+- Last Tabs
+- Login Data
+User data is stored in **C:\\Users\\username\\AppData\\Local\\GOogle\\Chrome\\User Data\\Default
+
+
+
+
+
