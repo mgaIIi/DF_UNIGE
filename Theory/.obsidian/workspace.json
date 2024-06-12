@@ -4,35 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "c95d72bba8aec647",
+        "id": "94094b9ac5bcc165",
         "type": "tabs",
         "children": [
           {
-            "id": "59f80c855521f382",
+            "id": "45478317053f8474",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "NTFS.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "dedc3a4f116dd918",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Volume and File System Analysis.md",
+                "file": "Windows Registries.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Volume and File System Analysis.md",
+                "file": "Windows Registries.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Volume and File System Analysis.md",
+                "file": "Windows Registries.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Volume and File System Analysis.md"
+                "file": "Windows Registries.md"
               }
             }
           }
@@ -159,8 +146,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "dedc3a4f116dd918",
+  "active": "45478317053f8474",
   "lastOpenFiles": [
+    "Windows Registries.md",
     "NTFS.md",
     "Volume and File System Analysis.md",
     "NTFS.md~",
