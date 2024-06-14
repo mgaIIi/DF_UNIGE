@@ -55,13 +55,14 @@ NTFS duplicates data to speed up directory browsing at the cost of updating thos
 
 ## NOTES FROM THE BOOK
 
-A file-system that is designed for scalability where generica data structures wrap other data structures with specific content.
+A file-system that is designed for scalability where generic data structures wrap other data structures with specific content.
 One example of generic wrapper is that every byte of data in NTFS is allocated to a file, even file-system administrative data that are typically hidden.
+
 The entire file-system is considered a data area.
-The only consinstent layout is that the first sectors contain the boot sector and the boot code.
+The only consistent layout is that the first sectors contain the boot sector and the boot code.
 
 The **Master File Table** contains information about all the files and directories.
-Every file and direcory has at least one entry in the table and they are very simple:
+Every file and directory has at least one entry in the table and they are very simple:
 - 42 bytes for a defined purpose
 - the rest for attributes, that are small data structures storing specific data ( file's name, size and even the content )
 
