@@ -10,7 +10,9 @@ Two important data structures:
 
 Each file and directory is allocated a **directory entry** data structure that contains the file's name, size and starting address of the file content along with other metadata.
 File and directory content is located in data units called **clusters** which are group of sectors.
-If more than one cluster is allocated for a file, the other ones are found by using the FAT structure.
+If more than one cluster is allocated for a file, the other ones are found by using the FAT structure and they form a **cluster chain**.
+
+![](./assets/CLUSTER_CHAIN_FAT.png)
 
 The number in FAT **12**/**16**/**32** indicates the size of the entries in the FAT structure.
 The layout of FAT is made of three physical sections:
