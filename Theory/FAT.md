@@ -15,7 +15,6 @@ Has some advanced functionalities and can be used where NTFS is unfeasible:
 - A *bitmap* tracks free clusters improving allocation and deletion operations
 - Designed for *flash drives*
 - File sizes are stored as 64bit integers
-\
 ## Classic FAT layout
 - The *Volume Boot Record* contains the *BIOS Parameter Block*
 - The *root directory of FAT12/16 has a fixed size and location* while in *FAT32 the boot sector includes the locations of the root directory, FSINFO structure, boot-sector backup*
@@ -33,3 +32,24 @@ A directory entry is 32 bytes long and  stores :
 - *starting cluster*
 - *time stamp informations*
 
+## NOTES FROM THE BOOK
+## Introduction
+
+Pretty simple file system but has been modified many times during the years.
+Two important data structures:
+- File Allocation Table
+- directory entries
+
+![](./assets/FAT_LAYOUT.png)
+
+Each file and directory is allocated a **directory entry** data structure that contains the file's name, size and starting address of the file content along with other metadata.
+File and directory content is located in data units called **clusters**.
+If more than one cluster is allocated for a file, the other ones are found by using the FAT structure.
+
+The number in FAT **12**/**16**/**32** indicates the size of the entries in the FAT structure.
+The layout of FAT is made of three physical sections:
+- Reserved Area -> File system category data
+- FAT Area -> Primary and backup FAT structures
+- Data Area -> Clusters that store file and directory content
+
+![](./assets/FAT_PHYSICAL_LAYOUT.png)

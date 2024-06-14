@@ -3,7 +3,7 @@ Is a proprietary journaling file system where **everything is a file except the 
 **Generic data structures** embed specific content with a very **scalable design**.
 
 Each unit of information associated with a file is implemented as a **file attribute** that consists of a **stream**. A file attribute can be its content, name or time-stamps.
-There **$DATA attribute** corresponds to the file content.
+The **$DATA attribute** corresponds to the file content.
 Applications can create additional named streams called **Alternate Data Streams**.
 
 When mounting you specify :
@@ -52,5 +52,7 @@ Each directory entry contains:
 - **file size**
 
 NTFS duplicates data to speed up directory browsing at the cost of updating those information in two places
+
+
 
 
