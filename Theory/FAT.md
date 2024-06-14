@@ -1,5 +1,4 @@
 ## NOTES FROM THE BOOK
-## Introduction
 
 Pretty simple file system but has been modified many times during the years.
 Two important data structures:

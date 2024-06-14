@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "FAT.md",
+                "file": "NTFS.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "FAT.md",
+                "file": "NTFS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "FAT.md",
+                "file": "NTFS.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "FAT.md"
+                "file": "NTFS.md"
               }
             }
           }
@@ -148,13 +148,14 @@
   },
   "active": "45478317053f8474",
   "lastOpenFiles": [
+    "assets/MFT_ENTRY.png",
+    "FAT.md",
     "assets/CLUSTER_CHAIN_FAT.png",
     "assets/DETAILED_FAT_LAYOUT.png",
     "assets/FAT_PHYSICAL_LAYOUT.png",
     "NTFS.md",
     "assets/FAT_LAYOUT.png",
     "Volume and File System Analysis.md",
-    "FAT.md",
     "EXT.md",
     "Windows Registries.md",
     "NTFS.md~",
