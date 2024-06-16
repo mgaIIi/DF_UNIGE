@@ -41,16 +41,6 @@ When file metadata can't fit in a single **Master File Table record** other ones
 
 NTFS divides the file's data into **compression units 16 clusters long** that is a trade-off between producing smaller compressed files and slowing random-access read operations.
 
-A directory contains a sorted list of the files.
-For large directories the names are stored in 4kb fixed-size index buffers.
-
-Index buffers implement a B-tree data-structure which minimizes the number of disk accesses per file find.
-
-Each directory entry contains:
-- the record number in the **Master File Table**
-- **Time stamp** informations
-- **file size**
-
 NTFS duplicates data to speed up directory browsing at the cost of updating those information in two places
 
 ## NOTES FROM THE BOOK
@@ -68,4 +58,15 @@ Every file and direcory has at least one entry in the table and they are very si
 ![](./assets/MFT_ENTRY.png)
 
 The MFT is a file, like everything else, so it has an entry for itself that is the first one ( **$MFT** ) and describes the on-disk location of the MFT.
+The MFT size grows sequentially and the addresses are called **file numbers** and are useful to detect possible corruptions and to recover deleted content.
+
+Every MFT entry has a little internal structure and most of it is used to store attributes, each of the has its own internal structure.
+All attributes have two parts:
+- header : identifies the attribute's type, size, name and stores its flags.
+- content : can have any format and **size** ( it can be stored in the MFT entry itself or can be **non-resident** and be stored in a external cluster )
+
+![](./assets/MFT_ENTRY_ATTRIBUTES.png)
+
+![](./assets/MFT_ENTRY_ATTRIBUTES_NON_RESIDENT.png)
+
 
