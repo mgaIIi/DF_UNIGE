@@ -69,4 +69,12 @@ All attributes have two parts:
 
 ![](./assets/MFT_ENTRY_ATTRIBUTES_NON_RESIDENT.png)
 
+**Non-resident** attributess are stored in cluster runs, which are consecutive clusters, that are documented using the starting cluster and the run length.
+Run can also be **sparse** to optimize allocation space.
 
+![](./assets/NTFS_RUNS.png)
+
+Attributes can also be stored compressed into compression units whose size can be found in the attribute header.
+
+NTFS uses **index** data structure which are collection of attributes stored in a sorted order using a B-Tree.
+This is done to sort and find data more easily. 
