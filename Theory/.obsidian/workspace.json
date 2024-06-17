@@ -146,8 +146,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "45478317053f8474",
+  "active": "3c4af814e6cdb29d",
   "lastOpenFiles": [
+    "assets/EXT_STRUCTURE.png",
+    "assets/EXT_BLOCK_GROUP.png",
     "FAT.md",
     "assets/EXT_LAYOUT.png",
     "EXT.md",
@@ -160,7 +162,6 @@
     "assets/MFT_ENTRY.png",
     "assets/CLUSTER_CHAIN_FAT.png",
     "assets/DETAILED_FAT_LAYOUT.png",
-    "assets/FAT_PHYSICAL_LAYOUT.png",
     "Volume and File System Analysis.md",
     "Windows Registries.md",
     "NTFS.md~",
