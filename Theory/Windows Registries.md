@@ -1,3 +1,7 @@
+## Miro Board
+
+![Public viewer access](https://miro.com/app/board/uXjVK6q4wf0=/?share_link_id=512001525084)
+
 They are stored in files know as **hives** and they contain keys and values.
 A live interaction with registries can happen via the command **regedit**.
 Values can be :
@@ -49,8 +53,6 @@ Are stored in %WINDIR%\\System32\\Config\\ :
 ## RecentDocs
 - NTUSER.DAT \\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\RecentDocs
 ## LastVisited MRU
-- NTUSER.DAT \\Software\\Miscorosf\\Windows\\CurrentVersion\\Explorer\\ComDlg32\\LastVisitedPidlMRU
-# OpenSave MRU
 - NTUSER.DAT \\Software\\Miscorosf\\Windows\\CurrentVersion\\Explorer\\ComDlg32\\OpenSavePidlMRU
 # UserAssist
 - NTUSER.DAT \\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\UserAssist

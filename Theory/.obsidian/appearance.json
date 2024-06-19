@@ -1,8 +1,11 @@
 {
-  "accentColor": "#00aaff",
-  "cssTheme": "Minimal",
+  "accentColor": "#8a58fd",
+  "cssTheme": "Things",
   "interfaceFontFamily": "Iosevka Nerd Font",
   "textFontFamily": "Inter",
   "monospaceFontFamily": "Iosevka Nerd Font",
-  "baseFontSize": 16
+  "baseFontSize": 16,
+  "showViewHeader": false,
+  "nativeMenus": false,
+  "theme": "obsidian"
 }

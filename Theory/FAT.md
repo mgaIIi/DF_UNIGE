@@ -15,9 +15,9 @@ If more than one cluster is allocated for a file, the other ones are found by us
 
 The number in FAT **12**/**16**/**32** indicates the size of the entries in the FAT structure.
 The layout of FAT is made of three physical sections:
-- Reserved Area -> File system category data
-- FAT Area -> Primary and backup FAT structures
-- Data Area -> Clusters that store file and directory content
+- **Reserved Area** -> File system category data
+- **FAT Area** -> Primary and backup FAT structures
+- **Data Area** -> Clusters that store file and directory content
 
 ![](./assets/FAT_PHYSICAL_LAYOUT.png)
 

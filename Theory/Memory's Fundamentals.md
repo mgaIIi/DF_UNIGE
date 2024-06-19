@@ -43,7 +43,8 @@ The host cannot interact with the garbage collector and it's managed internally 
 
 Available through different standard interfaces :
 - **Physically** -> connect the disk with a specific connector and cable
-- **Logically** -> connect and interact with the disk by using a *shared command and transport protocol* that defines how data is transferred - **ATA**, **SAS**, **NVMe**, **USB**
+- **Logically** -> cohas been modified many times during the years.
+Two important data structures:nnect and interact with the disk by using a *shared command and transport protocol* that defines how data is transferred - **ATA**, **SAS**, **NVMe**, **USB**
 
 ## ATA
 

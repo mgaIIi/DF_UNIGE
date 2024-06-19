@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "EXT.md",
-                "mode": "source",
+                "file": "NTFS.md",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 208.50260543823242
+    "width": 327.5,
+    "collapsed": true
   },
   "right": {
     "id": "4c24f5fa4413fb20",
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "EXT.md",
+                "file": "NTFS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "EXT.md",
+                "file": "NTFS.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "EXT.md"
+                "file": "NTFS.md"
               }
             }
           }
@@ -146,14 +147,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "3c4af814e6cdb29d",
+  "active": "45478317053f8474",
   "lastOpenFiles": [
+    "FAT.md",
+    "EXT.md",
+    "Memory's Fundamentals.md",
+    "Volume and File System Analysis.md",
+    "NTFS.md",
+    "Windows Registries.md",
     "assets/EXT_STRUCTURE.png",
     "assets/EXT_BLOCK_GROUP.png",
-    "FAT.md",
     "assets/EXT_LAYOUT.png",
-    "EXT.md",
-    "NTFS.md",
     "assets/EXT_RELATIONSHIP.png",
     "assets/NTFS_FIXUPS.png",
     "assets/NTFS_RUNS.png",
@@ -161,10 +165,6 @@
     "assets/MFT_ENTRY_ATTRIBUTES.png",
     "assets/MFT_ENTRY.png",
     "assets/CLUSTER_CHAIN_FAT.png",
-    "assets/DETAILED_FAT_LAYOUT.png",
-    "Volume and File System Analysis.md",
-    "Windows Registries.md",
-    "NTFS.md~",
-    "Memory's Fundamentals.md"
+    "NTFS.md~"
   ]
 }

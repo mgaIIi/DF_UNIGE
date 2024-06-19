@@ -6,7 +6,7 @@ The layout is divided into :
 - the remainder : divided into sections called **block groups**, each one of the same number of blocks and used to store files' name, metadata and content.
 
 File content is stored in **blocks** which are groups of consecutive sectors.
-File metadata is stored in **inodes** data structures that has a fixed size and is locatd in a inode table ( each block group has a inode table ).
+File metadata is stored in **inodes** data structures that have a fixed size and are located in a inode table ( each block group has a inode table ).
 Additional metadata may be stored in extended attributes
 File name is stored in **directory** data structure that are very simple, storing only the file's name and a pointer to the file's inode entry.
 
