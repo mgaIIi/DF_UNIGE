@@ -1,16 +1,7 @@
 ## Miro Board
 
-![Public viewer access](https://miro.com/app/board/uXjVK6q4wf0=/?share_link_id=512001525084)
-
-They are stored in files know as **hives** and they contain keys and values.
-A live interaction with registries can happen via the command **regedit**.
-Values can be :
-- Strings
-- Binary data
-- Integers
-- Lists
-
-## Root keys
+[Miro Board direct link](https://miro.com/app/board/uXjVK6q4wf0=/?share_link_id=512001525084)
+### Root keys to examine in a forensic examination
 
 1. **HKEY_CLASSES_ROOT**
 	- Purpose: Stores information about file associations and COM objects
@@ -41,49 +32,60 @@ Values can be :
 	- Purpose: Provides runtime performance data
 	- Details: This key is used by performance monitoring applications to access system performance data.		
 
-## Recent Files
-LNK files are automatically created by Windows in a Recent folder:
-- **User based folder** : %USERS%\\username\\AppData\\Roaming\\Microsoft\\Recent
+### Jumplists
 
-- LNK File Creation Time : first time file by thatn name was opened
-- LNK File Modified Time : Last time file by that name was opened
+They are designed to improve the taskbar productivity  providing quick access to the most recently or frequently used file, tasks and application-specific functions.
 
-## Jumplists
-Can contain much more references to opened files than "RecentDocs" and "Recent" folder.
-Two subfolder:
-- AutomaticDestinations
-- CustomDestinations
-Creation Time -> first time of app execution
-Modified Time -> last time of app execution
+They are stored in two primary locations :
+- **AutomaticDestinations** : that contains automatically generated Jump Lists
+	- PATH : **\Users\<Username>\AppData\Roaming\Microsoft\Windows\Recent\AutomaticDestinations**
 
-## Shellbags
-Are used to store user preferences for folder display in windows explorer
-**Useful to determine which folders were accessed on the local host, on a network share or on a removable device**
-For some folders is also possible to determine when they were accessed and can contain evidence of previously existing folders
+- **CustomDestinations** : that contain custom Jump Lists created by applications
+	- PATH : **C:\Users\<Username>\AppData\Roaming\Microsoft\Windows\Recent\CustomDestinations**
 
-Stored in user's registry files:
-**Explorer Access**
-- USRCLASS.DAT \\Local Settings\\Software\\Microsoft\\Windows\\Shell\\Bags
-- USRCLASS.DAT \\Local Settings\\Software\\Microsoft\\Windows\\Shell\\BagMRU
-**Desktop Access**
-- NTUSER.DAT \\Software\\Microsoft\\Windows\\Shell\\BagMRU
-- NTUSER.DAT \\Software\\Microsoft\\Windows\\Shell\\Bags
+Jumplists are user-specific so the analysis process has to be repeated for every user on the machine.
+They can link to files that have been deleted and can store useful informations such as :
+- File Paths
+- Last Access timestamps
+- Application-specific information
 
-## USB Device Analysis
-Is possible to achieve a lot of informations via **shell items** and **SYSTEM / SOFTWARE / NTUSER.DAT Registries** :
-- SYSTEM \\Current COntrol Set\\ENUM\\USB
-- SYSTEM \\Current Control Set\\ENUM\\USBSTOR
-Possible informations that can be obtained are:
+
+### Shellbags
+
+Are a set of registry keys in Windows that **store user preferences** for folder views.
+These preferences are metadata record about folder the user interacted with ( position on the screen, timestamps... ) even if they were deleted from the system.
+
+**They store evidence about resources in the local host, network share or on removable devices**.
+
+Visible from :
+1. **Explorer Access**
+	- HKEY_USERS\\Local Settings\\Software\\Microsoft\\Windows\\Shell\\Bags
+	- HKEY_USERS\\Local Settings\\Software\\Microsoft\\Windows\\Shell\\BagMRU
+2. **Desktop Access**
+	- HKEY_USERS\\Software\\Microsoft\\Windows\\Shell\\BagMRU
+	- HKEY_USERS\\Software\\Microsoft\\Windows\\Shell\\Bags
+
+### USB Device Analysis
+
+Is possible to achieve a lot of information via **shell items** and **SYSTEM / SOFTWARE / NTUSER.DAT Registries** :
+- HKEY_LOCAL_MACHINE\\SYSTEM\\Current COntrol Set\\Enum\\USB
+- HKEY_LOCAL_MACHINE\\SYSTEM\\MountedDevices
+- HKEY_LOCAL_MACHINE\\SYSTEM\\Current Control Set\\ENUM\\USBSTOR
+
+Possible information that can be obtained are:
 - Installation date and first connection
 - Last connection
 - Last Removal
 - Volume Serial Number
 
-## Prefetch
-Are used to increase system performances by preloading libraries/code.
-Stored in .pf files in **C:\\Windows\\Prefetch** and there is one file per executable.
+### Prefetch
 
-## Internet Browsers
+Are used to increase system performances by pre-loading libraries/code needed by applications.
+They store also useful information like the first and last time an application was run as well as the number of times.
+Stored in **.pf** files in **C:\Windows\Prefetch** and there is one file per executable.
+
+### Internet Browsers
+
 Is possible to recover:
 - Cache files
 - History
@@ -92,7 +94,8 @@ Is possible to recover:
 - Last Session
 - Last Tabs
 - Login Data
-User data is stored in **C:\\Users\\username\\AppData\\Local\\GOogle\\Chrome\\User Data\\Default
+
+User data is stored in **C:\\Users\\username\\AppData\\Local\\Google\\Chrome\\User Data\\Default
 
 
 
