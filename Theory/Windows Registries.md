@@ -10,64 +10,36 @@ Values can be :
 - Integers
 - Lists
 
-## System Hives
-Are stored in %WINDIR%\\System32\\Config\\ :
-- **SAM** : Contains local users' informations 
-	- Username
-	- User RID ( Relative Identifier)
-	- Account Creation timestamp
-	- Last login
-	- Last failed login
-	- Last password change
-	- Password "hint"
-	- Group Information
-- **SECURITY**
-- **SOFTWARE**
-- **SYSTEM**
-## Users Hives
--  %USERS%\\username\\NTUSER.DAT
--  %USERS%\\username\\AppData\\Local\\Microsoft\\Windows\\USERCLASS.DAT
-## Operating system version
--  SOFTWARE \\Microsoft\\Windows NT\\CurrentVersion
-## Computer Name
--  SYSTEM \\Current Control Set\\Control\\ComputerName\\ComputerName
+## Root keys
 
-## Timezone
-- SYSTEM \\Current Control Set\\Control\\TimeZoneInformation
-## Services
-- SYSTEM \\CurrentControlSet\\Services
-## Network TCP/IP Parameters
-- SYSTEM \\CurrentControlSet\\Services\\Tcpip\\Parameters\\Interfaces
-## Network List
-- SOFTWARE \\Microsoft\\Windows NT\\CurrentVersion\\NetworkList
-## Installed Applications
-- SOFTWARE \\Microsoft\\Windows\\CurrentVersion\\Uninstall
-## Shutdown Time
-- SYSTEM \\Current Control Set\\Control\\Windows
-## Autorun
-- SOFTWARE \\Microsoft\\Winows\\CurrentVersion\\Run
+1. **HKEY_CLASSES_ROOT**
+	- Purpose: Stores information about file associations and COM objects
+	- Details: This key is used to determine how files with certain extensions are handled by Windows, which program are used to open them, and the properties and actions available for these file types. 
 
-## User Activities
-## Installed Applications
-- NTUSER.DAT \\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\
-## RecentDocs
-- NTUSER.DAT \\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\RecentDocs
-## LastVisited MRU
-- NTUSER.DAT \\Software\\Miscorosf\\Windows\\CurrentVersion\\Explorer\\ComDlg32\\OpenSavePidlMRU
-# UserAssist
-- NTUSER.DAT \\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\UserAssist
+2. **HKEY_CURRENT_USER**
+	- Purpose: Contains cofiguration settings and preferences for the currently logged-in user
+	- Details: This includes user-specific setttings like desktop background, screen saver, folder views, and application settings. It maps to the user's profile directory. It maps to the user's profile directory
 
-## LNK files / Shortcut Files
-- **Shell Item** : A dara or a file containing information to access another file
-- **LNK File/Shortcut**: A shell item saved in a file wifh LNK extension:
-	- A shortcut to execute an application on User's Desktop
-	- A shortcut to open a file automatically created
+3. **HKEY_LOCAL_MACHINE**
+	- Purpose: Contains settings and configuration information for the local computer, applying to all users.
+	- Details: This includes hardware settings, system-wid software settings, and system configuration. It is divided into several subkeys, such as:
+		- **HARDWARE** : Informailn about hardware currently detected in the system
+		- **SAM** : Security Account Manager database, which stores information about user accounts
+		- **SECURITY** : Security-related information, including local security policies
+		- **SOFTWARE** : Installed software and configuration settings
+		- **SYSTEM** : System-related information, such as control sets and services
 
-A LNK file can contain:
-- Target drive type
-- Path of target file
-- Target file MAC timestamps
-- Target file size
+4. **HKEY_USERS**
+	- Purpose: Contains user-specific settings fro all users on the computer
+	- Details: Each user account on the system has a subkey in HKU. The currently logged-in user's settings are mirrored in HKCU.
+
+5. **HKEY_CURRENT_CONFIG**
+	- Purpose: Contains information about the current hardware profile used by the computer at startup
+	- Details: This includes settings that are specific to the current hardware configuration, such as display settings and printer settings.
+
+6. **HKEY_PERFORMANCE_DATA**
+	- Purpose: Provides runtime performance data
+	- Details: This key is used by performance monitoring applications to access system performance data.		
 
 ## Recent Files
 LNK files are automatically created by Windows in a Recent folder:
