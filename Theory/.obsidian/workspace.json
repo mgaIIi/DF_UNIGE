@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Windows Registries.md",
-                "mode": "source",
+                "file": "Volume and File System Analysis.md",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 327.5,
-    "collapsed": true
+    "width": 327.5
   },
   "right": {
     "id": "4c24f5fa4413fb20",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Windows Registries.md",
+                "file": "Volume and File System Analysis.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Windows Registries.md",
+                "file": "Volume and File System Analysis.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Windows Registries.md"
+                "file": "Volume and File System Analysis.md"
               }
             }
           }
@@ -152,9 +151,9 @@
     "NTFS.md",
     "FAT.md",
     "EXT.md",
+    "Windows Registries.md",
     "Memory's Fundamentals.md",
     "Volume and File System Analysis.md",
-    "Windows Registries.md",
     "assets/EXT_STRUCTURE.png",
     "assets/EXT_BLOCK_GROUP.png",
     "assets/EXT_LAYOUT.png",
