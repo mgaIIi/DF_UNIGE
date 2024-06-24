@@ -5,12 +5,11 @@ The **Cylinder-Head-Sector** was a early method for addressing physical blocks u
 Now replaced by **Logical Block Addressing**.
 
 ## Master Boot Record ( MBR)
+THe MBR is located in the first 512-byte sector and contains **boot-code**, a **partition-table** and a **signature-value**.
+Each table entry describes the layout of a partition.
 
-- **boot sector** at the very beginning of partitioned media that contains:
-	- machine code for the **boot loader** which usually loads and executes the **Volume Boot Record**
-	- optional **disk signature** used to identify uniquely the disk medium
-	- **informations on how the disk is partitioned**
-	- **the signature**
+The type field of a partition identifies what kind of data should exist in the partitions and Linux doesn't care about it but Windows instead relies on it.
+Each entry also identifies which partition is the bootable one.
 
 **Master Boot Record** partition style has only 4 slots for primary partitions so one is usually used as a **primary extended partition** slot that contains other partitions.
 To address partitions **logical-partition addressing** is used which uses the distance from the beginning of a partition.
@@ -19,6 +18,10 @@ Inside the **primary extended partition** we find **secondary extended partition
 - a **partition table**
 - a **secondary file-system partition (logical partition)** 
 
+![](./assets/MBR_LAYOUT.png)
+
+A **primary file system partition** is a partition whose entry is in the MBR and the partition contains a file system or other structured data.
+A **primary extended partition** is a partition whose entry is in the MBR and the partition contains additional partitions.
 
 ## Globally Unique IDentifier ( GUID )
 
