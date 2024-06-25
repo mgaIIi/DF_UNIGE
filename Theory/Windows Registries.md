@@ -1,7 +1,9 @@
+## NOTES FROM VARIOUS RESOURCES
 ## Miro Board
 
 [Miro Board direct link](https://miro.com/app/board/uXjVK6q4wf0=/?share_link_id=512001525084)
-### Root keys to examine in a forensic examination
+
+## Root keys to examine in a forensic examination
 
 1. **HKEY_CLASSES_ROOT**
 	- Purpose: Stores information about file associations and COM objects
@@ -96,8 +98,3 @@ Is possible to recover:
 - Login Data
 
 User data is stored in **C:\\Users\\username\\AppData\\Local\\Google\\Chrome\\User Data\\Default
-
-
-
-
-

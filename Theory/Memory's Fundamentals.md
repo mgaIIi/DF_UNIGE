@@ -1,4 +1,4 @@
-# Memory's Fundamentals
+## NOTES FROM THE SLIDES
 ## HDD
 Non-volatile storage made up of :
 - **magnetic spinning platters** : the disks themselves

@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "FAT.md",
+                "file": "Windows Registries.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "FAT.md",
+                "file": "Windows Registries.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "FAT.md",
+                "file": "Windows Registries.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "FAT.md"
+                "file": "Windows Registries.md"
               }
             }
           }
@@ -161,15 +161,15 @@
   },
   "active": "a7a76ceaacdc03b0",
   "lastOpenFiles": [
-    "EXT.md",
-    "Windows Registries.md",
     "Partitioning  Methods.md",
-    "assets/GPT_LAYOUT.png",
-    "File System Analysis Terminlogy.md",
-    "Memory's Fundamentals.md",
-    "assets/MBR_EXTENDED_PARTITION_LAYOUT.png",
     "NTFS.md",
     "FAT.md",
+    "EXT.md",
+    "File System Analysis Terminlogy.md",
+    "Memory's Fundamentals.md",
+    "Windows Registries.md",
+    "assets/GPT_LAYOUT.png",
+    "assets/MBR_EXTENDED_PARTITION_LAYOUT.png",
     "assets/EXT_STRUCTURE.png",
     "assets/EXT_BLOCK_GROUP.png",
     "assets/EXT_LAYOUT.png",
