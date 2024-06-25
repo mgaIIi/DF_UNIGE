@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Volume and File System Analysis.md",
-                "mode": "preview",
+                "file": "Memory's Fundamentals.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "a7a76ceaacdc03b0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "FAT.md",
+                "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Volume and File System Analysis.md",
+                "file": "FAT.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Volume and File System Analysis.md",
+                "file": "FAT.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,16 +138,16 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Volume and File System Analysis.md"
+                "file": "FAT.md"
               }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -146,14 +159,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "45478317053f8474",
+  "active": "a7a76ceaacdc03b0",
   "lastOpenFiles": [
-    "Memory's Fundamentals.md",
-    "Volume and File System Analysis.md",
-    "NTFS.md",
-    "FAT.md",
     "EXT.md",
     "Windows Registries.md",
+    "Partitioning  Methods.md",
+    "assets/GPT_LAYOUT.png",
+    "File System Analysis Terminlogy.md",
+    "Memory's Fundamentals.md",
+    "assets/MBR_EXTENDED_PARTITION_LAYOUT.png",
+    "NTFS.md",
+    "FAT.md",
     "assets/EXT_STRUCTURE.png",
     "assets/EXT_BLOCK_GROUP.png",
     "assets/EXT_LAYOUT.png",
@@ -162,8 +178,6 @@
     "assets/NTFS_RUNS.png",
     "assets/MFT_ENTRY_ATTRIBUTES_NON_RESIDENT.png",
     "assets/MFT_ENTRY_ATTRIBUTES.png",
-    "assets/MFT_ENTRY.png",
-    "assets/CLUSTER_CHAIN_FAT.png",
     "NTFS.md~"
   ]
 }
