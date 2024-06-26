@@ -11,8 +11,12 @@
             "id": "1156908c33bfb782",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "File-System Forensics Report - Milo Galli.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -65,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 341
+    "width": 200
   },
   "right": {
     "id": "aaae98ad6bcc5d33",
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "File-System Forensics Report - Milo Galli.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "File-System Forensics Report - Milo Galli.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "File-System Forensics Report - Milo Galli.md"
+              }
             }
           }
         ]
@@ -140,17 +148,17 @@
   },
   "active": "1156908c33bfb782",
   "lastOpenFiles": [
+    "Windows Forensics Report - Milo Galli.md",
+    "Network Forensics Report - Milo Galli.md",
+    "File-System Forensics Report - Milo Galli.md",
     "assets/Network_Forensics_Timeline.png",
     "assets/Network_assignment_NetworkMiner.png",
     "assets/Network_Assingment_pop_credentials_leaking.png",
-    "Network Forensics Report - Milo Galli.md",
     "assets/harmonic_email_attachment",
-    "Windows Forensics Report - Milo Galli.md",
     "assets/Owlsforsale_email_attachment4.png",
     "assets/Owlsforsale_email_attachment3.png",
     "assets/Owlsforsale_email_attachment2.png",
     "assets/Owlsforsale_email_attachment.png",
-    "File-System Forensics Report - Milo Galli.md",
     "- Milo Galli.md",
     "Network Forensics Report",
     "Windows Forensics - Milo Galli.md",

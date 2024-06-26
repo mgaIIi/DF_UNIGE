@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Memory's Fundamentals.md",
-                "mode": "source",
+                "file": "EXT.md",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -25,14 +25,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Windows Registries.md",
+                "file": "Memory's Fundamentals.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -82,7 +81,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 327.5
+    "width": 266.5
   },
   "right": {
     "id": "4c24f5fa4413fb20",
@@ -98,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Windows Registries.md",
+                "file": "EXT.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Windows Registries.md",
+                "file": "EXT.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Windows Registries.md"
+                "file": "EXT.md"
               }
             }
           }
@@ -147,7 +146,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -159,18 +159,18 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "a7a76ceaacdc03b0",
+  "active": "3c4af814e6cdb29d",
   "lastOpenFiles": [
+    "FAT.md",
+    "Memory's Fundamentals.md",
     "Partitioning  Methods.md",
+    "NTFS.md",
+    "EXT.md",
     "Windows Registries.md",
     "Useful Resources/File System Forensic Analysis.pdf",
     "Useful Resources/windows_forensics.pdf",
     "Useful Resources",
-    "NTFS.md",
-    "EXT.md",
     "assets/WINDOWS_REGISTRIES.jpg",
-    "FAT.md",
-    "Memory's Fundamentals.md",
     "File System Analysis Terminlogy.md",
     "assets/GPT_LAYOUT.png",
     "assets/MBR_EXTENDED_PARTITION_LAYOUT.png",
