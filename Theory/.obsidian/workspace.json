@@ -161,6 +161,8 @@
   },
   "active": "a7a76ceaacdc03b0",
   "lastOpenFiles": [
+    "Partitioning  Methods.md",
+    "Windows Registries.md",
     "Useful Resources/File System Forensic Analysis.pdf",
     "Useful Resources/windows_forensics.pdf",
     "Useful Resources",
@@ -170,8 +172,6 @@
     "FAT.md",
     "Memory's Fundamentals.md",
     "File System Analysis Terminlogy.md",
-    "Windows Registries.md",
-    "Partitioning  Methods.md",
     "assets/GPT_LAYOUT.png",
     "assets/MBR_EXTENDED_PARTITION_LAYOUT.png",
     "assets/EXT_STRUCTURE.png",

@@ -46,7 +46,7 @@ They are stored in two primary locations :
 	- PATH : **\Users\<Username>\AppData\Roaming\Microsoft\Windows\Recent\AutomaticDestinations**
 
 - **CustomDestinations** : that contain custom Jump Lists created by applications
-	- PATH : **C:\\Users\\<Username>\\AppData\\Roaming\\Microsoft\\Windows\\Recent\\CustomDestinations**
+	- PATH : **C:\Users\<Username>\AppData\Roaming\Microsoft\Windows\Recent\CustomDestinations**
 
 Jumplists are user-specific so the analysis process has to be repeated for every user on the machine.
 They can link to files that have been deleted and can store useful informations such as :
