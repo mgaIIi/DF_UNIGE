@@ -30,7 +30,7 @@ A **secondary file system partition** is located inside the **primary extended p
 ![](./assets/MBR_EXTENDED_PARTITION_LAYOUT.png)
 
 The **boot code** exist in the first 446 bytes of the MBR and it processes the partition table to identify which partition is bootable.
-Once found it executes the code contained its first sector tha will operate system-specific.
+Once found it executes the code contained its first sector that will operate system-specific.
 ## GUID Partition Table ( GPT )
 
 Used by the **Extensible Firmware Interface (EFI)** which replaced **BIOS**, and is currently the standard:

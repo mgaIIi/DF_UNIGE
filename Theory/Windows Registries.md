@@ -10,13 +10,13 @@
 	- Details: This key is used to determine how files with certain extensions are handled by Windows, which program are used to open them, and the properties and actions available for these file types. 
 
 2. **HKEY_CURRENT_USER**
-	- Purpose: Contains cofiguration settings and preferences for the currently logged-in user
-	- Details: This includes user-specific setttings like desktop background, screen saver, folder views, and application settings. It maps to the user's profile directory. It maps to the user's profile directory
+	- Purpose: Contains configuration settings and preferences for the currently logged-in user
+	- Details: This includes user-specific settings like desktop background, screen saver, folder views, and application settings. It maps to the user's profile directory. It maps to the user's profile directory
 
 3. **HKEY_LOCAL_MACHINE**
 	- Purpose: Contains settings and configuration information for the local computer, applying to all users.
-	- Details: This includes hardware settings, system-wid software settings, and system configuration. It is divided into several subkeys, such as:
-		- **HARDWARE** : Informailn about hardware currently detected in the system
+	- Details: This includes hardware settings, system-wide software settings, and system configuration. It is divided into several sub-keys, such as:
+		- **HARDWARE** : Information about hardware currently detected in the system
 		- **SAM** : Security Account Manager database, which stores information about user accounts
 		- **SECURITY** : Security-related information, including local security policies
 		- **SOFTWARE** : Installed software and configuration settings
@@ -24,7 +24,7 @@
 
 4. **HKEY_USERS**
 	- Purpose: Contains user-specific settings fro all users on the computer
-	- Details: Each user account on the system has a subkey in HKU. The currently logged-in user's settings are mirrored in HKCU.
+	- Details: Each user account on the system has a sub-key in HKU. The currently logged-in user's settings are mirrored in HKCU.
 
 5. **HKEY_CURRENT_CONFIG**
 	- Purpose: Contains information about the current hardware profile used by the computer at startup
@@ -33,6 +33,9 @@
 6. **HKEY_PERFORMANCE_DATA**
 	- Purpose: Provides runtime performance data
 	- Details: This key is used by performance monitoring applications to access system performance data.		
+
+
+![](./assets/WINDOWS_REGISTRIES.jpg)
 
 ### Jumplists
 
@@ -43,7 +46,7 @@ They are stored in two primary locations :
 	- PATH : **\Users\<Username>\AppData\Roaming\Microsoft\Windows\Recent\AutomaticDestinations**
 
 - **CustomDestinations** : that contain custom Jump Lists created by applications
-	- PATH : **C:\Users\<Username>\AppData\Roaming\Microsoft\Windows\Recent\CustomDestinations**
+	- PATH : **C:\\Users\\<Username>\\AppData\\Roaming\\Microsoft\\Windows\\Recent\\CustomDestinations**
 
 Jumplists are user-specific so the analysis process has to be repeated for every user on the machine.
 They can link to files that have been deleted and can store useful informations such as :

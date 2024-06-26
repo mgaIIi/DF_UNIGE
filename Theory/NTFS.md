@@ -19,9 +19,9 @@ Every MFT entry has a little internal structure and most of it is used to store 
 Attributes consists of streams and applications can create additional named streams called **Alternate Data Streams**.
 **ADS** are alternative data contents that do not affect each other and are usually hidden from common file listing commands.
 
-All attributes have two parts:
-- header : identifies the attribute's type, size, name and stores its flags.
-- content : can have any format and **size** ( it can be stored in the MFT entry itself or can be **non-resident** and be stored in a external cluster )
+All **attributes** have two parts:
+- **header** : identifies the attribute's type, size, name and stores its flags.
+- **content** : can have any format and **size** ( it can be stored in the MFT entry itself or can be **non-resident** and be stored in a external cluster )
 
 ![](./assets/MFT_ENTRY_ATTRIBUTES.png)
 

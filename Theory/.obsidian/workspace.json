@@ -161,13 +161,14 @@
   },
   "active": "a7a76ceaacdc03b0",
   "lastOpenFiles": [
-    "Partitioning  Methods.md",
     "NTFS.md",
-    "FAT.md",
     "EXT.md",
-    "File System Analysis Terminlogy.md",
+    "assets/WINDOWS_REGISTRIES.jpg",
+    "FAT.md",
     "Memory's Fundamentals.md",
+    "File System Analysis Terminlogy.md",
     "Windows Registries.md",
+    "Partitioning  Methods.md",
     "assets/GPT_LAYOUT.png",
     "assets/MBR_EXTENDED_PARTITION_LAYOUT.png",
     "assets/EXT_STRUCTURE.png",
@@ -177,7 +178,6 @@
     "assets/NTFS_FIXUPS.png",
     "assets/NTFS_RUNS.png",
     "assets/MFT_ENTRY_ATTRIBUTES_NON_RESIDENT.png",
-    "assets/MFT_ENTRY_ATTRIBUTES.png",
     "NTFS.md~"
   ]
 }
