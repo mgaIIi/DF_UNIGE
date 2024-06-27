@@ -85,12 +85,12 @@ GUID Partition Table (EFI)
 Offset Sector: 0
 Units are in 512-byte sectors
 
-      Slot           Start                     End                    Length               Description
-000:  -------      0000000000      0000002047     0000002048      Unallocated
-001:  002           0000002048      0000008158      0000006111       Linux filesystem
-002:  Meta         0000008159      0000008190      0000000032      Partition Table
-003:  -------      0000008159      0000008191       0000000033     Unallocated
-004:  Meta         0000008191      0000008191       0000000001      GPT Header
+      Slot         Start           End            Length           Description
+000:  -------      0000000000      0000002047     0000002048       Unallocated
+001:  002          0000002048      0000008158     0000006111       Linux filesystem
+002:  Meta         0000008159      0000008190     0000000032       Partition Table
+003:  -------      0000008159      0000008191     0000000033       Unallocated
+004:  Meta         0000008191      0000008191     0000000001       GPT Header
 ```
 
 From the output of **TSK - mmls** I saw that apparently there was a Linux filesystem located in the first partition so I tried to extract it using **TSK - mmcat** 
