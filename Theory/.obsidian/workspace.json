@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "EXT.md",
+                "file": "FAT.md",
                 "mode": "preview",
                 "source": false
               }
@@ -97,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "EXT.md",
+                "file": "FAT.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "EXT.md",
+                "file": "FAT.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "EXT.md"
+                "file": "FAT.md"
               }
             }
           }
@@ -161,12 +161,13 @@
   },
   "active": "3c4af814e6cdb29d",
   "lastOpenFiles": [
+    "Useful Resources/Windows Registry Forensics Advanced Digital Forensic Analysis of the Windows Registry.pdf",
+    "EXT.md",
+    "Windows Registries.md",
     "FAT.md",
     "Memory's Fundamentals.md",
     "Partitioning  Methods.md",
     "NTFS.md",
-    "EXT.md",
-    "Windows Registries.md",
     "Useful Resources/File System Forensic Analysis.pdf",
     "Useful Resources/windows_forensics.pdf",
     "Useful Resources",
