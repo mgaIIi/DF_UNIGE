@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Network Forensics Report - Milo Galli.md",
-                "mode": "source",
+                "file": "File-System Forensics Report - Milo Galli.md",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Network Forensics Report - Milo Galli.md",
+                "file": "File-System Forensics Report - Milo Galli.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Network Forensics Report - Milo Galli.md",
+                "file": "File-System Forensics Report - Milo Galli.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Network Forensics Report - Milo Galli.md"
+                "file": "File-System Forensics Report - Milo Galli.md"
               }
             }
           }
@@ -148,9 +148,9 @@
   },
   "active": "1156908c33bfb782",
   "lastOpenFiles": [
+    "Network Forensics Report - Milo Galli.md",
     "File-System Forensics Report - Milo Galli.md",
     "Windows Forensics Report - Milo Galli.md",
-    "Network Forensics Report - Milo Galli.md",
     "assets/Network_Forensics_Timeline.png",
     "assets/Network_assignment_NetworkMiner.png",
     "assets/Network_Assingment_pop_credentials_leaking.png",

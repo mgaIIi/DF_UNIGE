@@ -72,7 +72,6 @@ CONTENT INFORMATION
 Sector Size: 512
 Cluster Size: 2048
 Total Cluster Range: 2 - 2037
-fcat ps5.jpg linuxfs_extracted.dd > ps5jpg_extracted.jpg
 FAT CONTENTS (in sectors)
 --------------------------------------------
 49-76 (28) -> EOF
@@ -596,7 +595,7 @@ Units are in 512-byte sectors
 005:  -------     0016777183   0016777215   0000000033   Unallocated
 ```
 
-From the output I inferred that the image was partitioned using GPT and in the 4th partition there was _Microsft basic data_ so I tried to extract it and see what was inside
+From the output I inferred that the image was partitioned using GPT and in the 4th partition there was _Microsoft basic data_ so I tried to extract it and see what was inside
 using **TSK - mmcat**.
 Once extracted I tried to get some informations about the filesystem using **TSK - fsstat**
 
