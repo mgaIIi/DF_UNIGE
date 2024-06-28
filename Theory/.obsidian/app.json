@@ -1,4 +1,5 @@
 {
   "showInlineTitle": false,
-  "showRibbon": false
+  "showRibbon": false,
+  "trashOption": "local"
 }

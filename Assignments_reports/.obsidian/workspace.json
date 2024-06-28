@@ -65,7 +65,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -146,11 +147,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1156908c33bfb782",
+  "active": "7496163acb16479d",
   "lastOpenFiles": [
     "Network Forensics Report - Milo Galli.md",
-    "File-System Forensics Report - Milo Galli.md",
     "Windows Forensics Report - Milo Galli.md",
+    "File-System Forensics Report - Milo Galli.md",
     "assets/Network_Forensics_Timeline.png",
     "assets/Network_assignment_NetworkMiner.png",
     "assets/Network_Assingment_pop_credentials_leaking.png",

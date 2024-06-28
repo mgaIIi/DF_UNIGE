@@ -147,7 +147,8 @@ Opening the pcap file with **Network Miner** we can see some informations about 
 
 ![](./assets/Network_Assignment_NetworkMiner.png)
 
-Taking a closer look it's possible to see that the mail was sent from a pretty suspicious address ( **smtp.harmonic.com (mx.lockermaster.lol \[58.16.123.111]**) and contained an attachment called [offers.odt](./assets/harmonic_email_attachment).
+Taking a closer look it's possible to see that the mail was sent from a pretty suspicious address ( **smtp.harmonic.com (mx.lockermaster.lol \[58.16.123.111]**) and contained an attachment called [offers.odt](./assets/harmonic_email_attachment). (🚨 NOTE : I actually missed to analyse this file that contained a macro that activated a reverse shell... ops. Unzip the file to see that.)
+
 Notice that the ip address found in the server is the same as the attacker's one as well.
 Although the attached file seemed to be clean the messages where exchanged using POP3 communication protocol and analysing the packets with a tool like Wireshark it was possible to spoof Claudio's credentials
 
